@@ -62,7 +62,7 @@ see the app carrying a realistic event, use the fixture instead:
 bundle → Use this event in the app (or open it from Home's **Events** list —
 the adoption agent also pulls it by itself once the base URL is set). That
 loads the official 92-item program across 7 days (see
-[WSOL26-PROGRAM.md](WSOL26-PROGRAM.md)), 14 teachers, 23 venues with 22 map
+[WSOL26-PROGRAM.md](WSOL26-PROGRAM.md)), 18 teachers, 23 venues with 22 map
 points (8 program venues + 15 landmarks) on the real Florida map with tappable
 pins and chips, 14
 categories, 35 info pages and 19 menu entries; Home lists it with its cover and

@@ -281,8 +281,9 @@ live but **empty**.
       into the WSOL26 event so the app shows the shape of the week before the
       real schedule lands. Structure in [CONTENT-MODEL.md](CONTENT-MODEL.md).
       *Update (2026-10-29):* the **official program** arrived as the programming
-      team's master sheet and is transcribed into the fixture (v12: 92 items, 21
-      still "To be announced", 14 teachers, Tree Pavilion + Inco Park as venues)
+      team's master sheet and is transcribed into the fixture (v13 after the
+      2026-11-19 update of the sheet: 93 items, 9 still "To be announced", 18
+      teachers, Tree Pavilion + Inco Park as venues)
       and `scripts/fixtures/csv/wsol26-{program,venues,teachers}.csv` by
       `scripts/wsol26-official-program.mjs`; production already carries the 12
       presenters with bios and photos. Reading decisions, open questions and the

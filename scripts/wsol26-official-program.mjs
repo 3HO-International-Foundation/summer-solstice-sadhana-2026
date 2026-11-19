@@ -4,8 +4,10 @@
  * program into scripts/fixtures/wsol26.json (program, venues, teachers), as
  * read from the programming team's master sheet:
  *
- *   https://docs.google.com/spreadsheets/d/1i62hOJiy1rlJFBStv884FB2p6Kp_OYpN97QNPKMcvCU
- *   ("Copy of Programming Team Master Doc", tab "General Program", read 2026-10-29)
+ *   https://docs.google.com/spreadsheets/d/11tzO-DOgjlLDLNno3ZAHHGvIB63RpCN8OQc6AU7pCEU
+ *   ("Programming WSOL26 Team Master Doc", tab "General Program", read 2026-11-19;
+ *   class descriptions from its "Teacher Needs" tab. First read 2026-10-29 from the
+ *   earlier copy 1i62hOJiy1rlJFBStv884FB2p6Kp_OYpN97QNPKMcvCU.)
  *
  * The sheet is a grid (hours × day/venue columns) with merged cells and free
  * text, so it is transcribed here by hand rather than parsed. Every reading
@@ -49,8 +51,16 @@ const CHIEF = "Chief Open Heart";
 const JOT_SIMRIT = "Jot Simrit";
 const DYAL = "Dyal Gobinde";
 const KHUSHBIR = "Khushbir Singh";
-const KARUNA = "Karuna";
 const KARINA = "Karina Skye";
+const SATWANT = "Satwant Singh";
+const SAT_NAM = "Sat Nam Kaur";
+const RAI = "Rai Singh";
+const SHAKTA = "Shakta Kaur";
+const SAT_KIRIN = "Sat Kirin Kaur";
+// Named in the sheet but without a profile yet (no bio or photo anywhere): shown
+// as plain text in the app until the team sends one.
+const KIRET = "Kiret Naam Kaur";
+const NO_PROFILE = new Set([KIRET]);
 
 /* ----------------------------------------------------------------- copy */
 const TBA = ["To be announced"];
@@ -60,59 +70,83 @@ const SADHANA = "Japji Sahib, a Kundalini Yoga kriya and the Aquarian Sadhana ma
 const SADHANA_WTY = `${SADHANA} Shorter on White Tantric Yoga® days.`;
 const GURD = "Gurdwara is a sacred space of Shabad (sound current), sangat (community), and seva (service). Whether this is your first time or a treasured tradition, you're invited to sit together in remembrance, sing the Naam, and bathe the mind in Gurbani kirtan. All are welcome.";
 const GURD_WTY = `${GURD} Shorter on White Tantric Yoga® days.`;
+const GURD_AKHAND = `${GURD} The Akhand Paath, the continuous reading of the Siri Guru Granth Sahib, begins at 6:30 AM.`;
+const GURD_VOWS = `${GURD} Sikh vows and Minister vows are taken this morning at 6:45 AM.`;
+const GURD_TUE = "The Gurdwara opens the Solstice: Sukhmani Sahib 2:00–4:00 PM, Rehras 4:00–4:30 PM, then Anand Sahib, Ardas and Hukam 4:30–5:30 PM. All are welcome.";
 const MEDITATION_KY = "A short all-camp meditation, then meet your Karma Yoga or Service Exchange team. All attendees have a karma yoga: it keeps the event sustainable and flowing. Unsure of yours? Ask at the event office.";
 const LUNCH = "Free time until the afternoon program.";
 const REHRAS = "Evening prayer, followed by Sukhasan (Hukam, Kirtan Sohila, Ardas).";
 const WTY = "Gates open 7:15 AM, warm-ups 8:00 AM. Wear white clothing and a white head covering. Lunch is served midday. Doors close when a meditation begins and reopen when it ends.";
 const MONITORS = "During lunch. Interested in being a Monitor at White Tantric Yoga® (WTY)? A WTY Monitor must have attended at least one day of WTY, wear white clothing and a white head covering, and wear the Monitor ID marker. Monitors receive the same benefits of WTY as if they were doing the meditations with a partner.";
 const FIRST_TIMERS = "During dinner. First time at White Tantric Yoga®? Meet the WTY team and learn what to expect over the three days.";
-const SNR = "Sat Nam Rasayan®: healing through awareness, in deep meditative silence. All camp together, no parallel classes, with a short break at 3:30 PM.";
+const SNR = "In this experience, explore Sat Nam Rasayan® through meditation, breath, and partnered healing. Develop subtle awareness, presence, and intuition while supporting your own healing and others. Experience deep relaxation, nervous system regulation, and greater clarity, peace, and inner spaciousness. All camp together, no parallel classes, with a short break at 3:30 PM.";
 const ALL_CAMP = "All camp together, no parallel classes.";
-const CHECKIN = "Have your ticket QR code and a photo ID ready. If you don't have a service exchange or karma yoga team yet, one will be assigned at check-in. Check-in hours to be confirmed.";
-const ORIENTATION = "The program begins at 3:00 PM with an orientation and the first sessions. Details to be announced.";
+const CHECKIN = "Have your ticket QR code and a photo ID ready. If you don't have a service exchange or karma yoga team yet, one will be assigned at check-in.";
+const DINNER_LANGAR = "Served langar style.";
 const OPENING = "Come open the space with us! Welcome home, welcome back. Join the teachers to open this Winter Solstice Celebration with music, laughter, meditation and joy.";
 const KIDS_DESC = "Program for children and youth while the adults are in class. Parents check children in and out. Daily schedule to be announced.";
-const KIDS_THU = `${KIDS_DESC} Today the Kids Camp visits the Gurdwara at 2:30 PM.`;
-const MUSIC = "Live music at the Yogi Tea Café. Musicians to be announced.";
-const GONG = "Gong meditation and deep relaxation at the Churuata. Bring a blanket. Facilitator to be announced.";
-const SDI = "Sikh Dharma International gathering. Title and presenters to be announced.";
-const IKYTA = "International Kundalini Yoga Teachers Association session. Details to be announced.";
-const WOMEN = "Facilitator to be announced.";
-const TANTRIC_INTEGRATION = "Integrate the three days of White Tantric Yoga®. Facilitator to be announced.";
+const KIDS_FRI = `${KIDS_DESC} Today the Kids Camp visits the Gurdwara at 2:30 PM.`;
+const MUSIC_JAM = "Enjoy an evening of devotional chanting mixed with original songs performed by a collection of your favorite Solstice musicians including Livtar Singh, Karina Skye, Japa Kaur and Sat Jot Singh.";
+const OPEN_MIC = "Following a featured musical performer of the night, the stage is open to those wanting to share their musical talents. Interested parties can contact Japa Kaur to schedule a slot.";
+const GONG = "Gong meditation and deep relaxation at the Churuata. Bring a blanket.";
+const GONG_TBA = `${GONG} To be confirmed for this evening.`;
+const IKYTA = "International Kundalini Yoga Teachers Association (IKYTA) session.";
+const TANTRIC_INTEGRATION = "Integrate the three days of White Tantric Yoga®.";
+const SAT_KIRIN_CLASS = "Class title and details to be announced.";
 const CLOSING = "All camp together to close the Solstice, leading into Nagar Kirtan.";
-const NAGAR = "Kirtan procession through camp to the Gurdwara, where Rensabai begins. Start time to be confirmed.";
-const RENSABAI = "Rensabai Kirtan: musicians take turns singing Gurbani through the night. Start time to be confirmed.";
+const NAGAR = "Kirtan procession through camp from the Closing Circle to the Gurdwara, where Rensabai begins at 8:00 PM.";
+const RENSABAI = "Rensabai Kirtan: musicians take turns singing Gurbani through the night.";
 const DEPART = "Everyone who is not helping with camp tear-down leaves the site in the morning. Travel day: no afternoon or evening program.";
+
+/* --------------------------------------------------- class descriptions */
+// From the sheet's "Teacher Needs" tab (the teachers' own form answers, each marked
+// "correct and ready to publish"). Only whitespace and a missing final period are touched.
+const D_CHRIS = "In these times, everyday is harder and harder to live following the heart in every situation, stress & busy lifestyle make our heart depleted & we are pushed to have our mind in control. We'll use the power of our inner sun activating and uplifting our heart, remembering the love we are.";
+const D_SAT_BIR = "In easy-to-understand language, this workshop will review modern biomedical research on yoga with a special focus on Kundalini Yoga. It will include the scientific evidence for how yoga works, clinical trials research, and the value and implications of yoga research in society and healthcare.";
+const D_SAT_NAM = "We will explore the sacred Shabad of Guru Arjan Dev Ji, expressing the soul's deep longing for union with the Guru. Through reflection and chanting, we will connect with the essence of devotion, surrender, and the transformative power of Gurbani.";
+const D_DEVI = "A heart-centered Kundalini Yoga journey into Divine Mother love: the primal power that nourishes, protects, creates and holds life. The class is moderately active, moving from kriya into deep meditation, mantra and stillness to experience love as strength, presence and grace.";
+const D_SATWANT = "This is an inspirational class where we discuss the various types of Sadhana (40, 90, 120, 1000 days, Amrit Vela Sadhana). The benefits and challenges of it, what it takes to develop a lifelong practice. The goal is to leave students inspired to commit to a daily practice.";
+const D_JOT = "Step into a transformative Kundalini practice designed to deepen your inner dialogue. Through rhythmic breathwork, targeted kriyas, and silent meditation, tune out external noise, awaken vital energy, and connect to the subtle guidance of your authentic self. Silence becomes your highest wisdom.";
+const D_DYAL = "Kundalini Yoga. Be on time and ready to work! Full class of Kundalini Yoga Kriyas to prime the endocrine glandular system in perfect alignment with the winter solstice to release and rebirth at the sacred junction of the year. Ending with an extended kriya to purify sushumna and experience shuniya.";
+const D_HARIDASS = `Directing Energy with Clarity. Stress is not the enemy; it is energy looking for direction. In this class, we transform the scattered patterns of overwhelm into a focused current of strength, clarity, and inner stability. Do this with somatic intelligence, movement, mantra, breath, and intention. ${ALL_CAMP}`;
+const D_KHUSHBIR = "Yoga practice to stretch and exercise the body, regenerate nerves, adjust your rhythms and fine tune your frequency. A complete practice of a fun, challenging kriya, taught at full times, relaxation, and breath meditation with mantra. Love more fully, expand the universality of your personality!";
 
 /* ------------------------------------------------------------- builders */
 const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const slug = (s) => s.toLowerCase().replace(/®/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
 
 const items = [];
-function add(date, startTime, endTime, title, { category, location, facilitator, description, tags } = {}) {
-  const item = { id: `${date}-${startTime.replace(":", "")}-${slug(title)}`, date, day: DAYS[new Date(`${date}T12:00:00Z`).getUTCDay()], startTime };
+// `id` pins the id a session was first published with. Ids are built from date + start +
+// title, so a session whose time or name changes would otherwise get a new id and lose
+// every favorite and reminder attendees saved on it. Pin instead of letting it change.
+function add(date, startTime, endTime, title, { id, category, location, facilitator, language, description, tags } = {}) {
+  const item = { id: id ?? `${date}-${startTime.replace(":", "")}-${slug(title)}`, date, day: DAYS[new Date(`${date}T12:00:00Z`).getUTCDay()], startTime };
   if (endTime) item.endTime = endTime;
   item.title = title;
   if (category) item.category = category;
   if (tags) item.tags = [...tags];
   if (location) item.location = location;
   if (facilitator) item.facilitator = facilitator;
+  if (language) item.language = language;
   if (description) item.description = description;
   items.push(item);
 }
 
 const rise = (d, end) => add(d, "03:00", end, "Rise up sweet family dear!", { description: RISE });
 const sadhana = (d, s, e, extra = {}) => add(d, s, e, "Aquarian Sadhana", { category: "Sadhana", location: TANTRIC, description: SADHANA, ...extra });
-const gurdwara = (d, s, e, description = GURD) => add(d, s, e, "Gurdwara", { category: "Gurdwara", location: GURDWARA, description });
+const gurdwara = (d, s, e, description = GURD, extra = {}) => add(d, s, e, "Gurdwara", { category: "Gurdwara", location: GURDWARA, description, ...extra });
+// Full days: Gurdwara moved from 6:00 to 6:15 AM (sheet, 2026-11-19); the id stays.
+const gurdwaraFullDay = (d, description = GURD) => gurdwara(d, "06:15", "07:15", description, { id: `${d}-0600-gurdwara` });
 const meal = (d, s, e, name, description) => add(d, s, e, `🍴 ${name}`, { category: "Meal", location: CHURUATA, description });
 const meditationKY = (d) => add(d, "08:30", "09:30", "All-Camp Meditation & Karma Yoga Meetings", { category: "Community", location: TANTRIC, description: MEDITATION_KY });
 const kids = (d, description = KIDS_DESC) => add(d, "09:00", "17:00", "Kids Camp", { category: "Community", location: KIDS, description, tags: TBA });
 const rehras = (d) => add(d, "17:00", "17:30", "Rehras", { category: "Gurdwara", location: GURDWARA, description: REHRAS });
-const karmaYoga = (d) => add(d, "18:30", "19:30", "Karma Yoga Action", { category: "Service" });
-const evening = (d) => {
-  add(d, "19:30", "21:30", "Yogi Tea Café Music", { category: "Music", location: YOGI_TEA, description: MUSIC, tags: TBA });
-  add(d, "20:30", "21:30", "Gong Meditation", { category: "Meditation", location: CHURUATA, description: GONG, tags: TBA });
-};
+const karmaYoga = (d) => add(d, "18:30", "19:00", "Karma Yoga Action", { category: "Service" });
+// Evening slots keep the ids of the placeholders they replace ("Yogi Tea Café Music",
+// whose slug dropped the é: "yogi-tea-caf-music", and "Gong Meditation"). The gong is written in the grid for Wednesday only; the row label
+// still says "Gong in Churuata at 8:30-9:30" for every night, so Thu–Sat stay tagged.
+const eveningMusic = (d, title, description) => add(d, "19:30", "21:30", title, { id: `${d}-1930-yogi-tea-caf-music`, category: "Music", location: YOGI_TEA, description });
+const eveningGong = (d, confirmed) => add(d, "20:30", "21:30", "Evening Gong", { id: `${d}-2030-gong-meditation`, category: "Meditation", location: CHURUATA, description: confirmed ? GONG : GONG_TBA, ...(confirmed ? {} : { tags: TBA }) });
 const night = (d) => {
   add(d, "21:45", null, "Bazaar closes", { category: "Logistics" });
   add(d, "22:00", null, "🌙 Lights Out", { category: "Logistics" });
@@ -121,9 +155,9 @@ const cls = (d, s, e, title, category, location, facilitator, extra = {}) => add
 
 /* ------------------------------------------------------------- Tue Dec 15 · arrival */
 let d = "2026-12-15";
-add(d, "13:00", "20:00", "Arrival & Registration", { category: "Logistics", location: OFFICE, description: CHECKIN, tags: TBA });
-add(d, "15:00", "17:30", "Orientation & First Sessions", { category: "Community", location: TANTRIC, description: ORIENTATION, tags: TBA });
-meal(d, "17:30", "18:30", "Dinner");
+add(d, "14:00", "20:00", "Arrival & Registration", { id: `${d}-1300-arrival-registration`, category: "Logistics", location: OFFICE, description: CHECKIN }); // "Registration: 2-8 pm"
+gurdwara(d, "14:00", "17:30", GURD_TUE);
+meal(d, "17:30", "18:30", "Dinner", DINNER_LANGAR);
 karmaYoga(d);
 add(d, "19:30", "21:00", "Opening Circle", { category: "Community", location: TANTRIC, description: OPENING });
 night(d);
@@ -132,14 +166,14 @@ night(d);
 d = "2026-12-16";
 rise(d, "03:40");
 sadhana(d, "03:40", "06:00", { facilitator: HARIDASS });
-gurdwara(d, "06:00", "07:15");
+gurdwaraFullDay(d, GURD_AKHAND);
 meal(d, "07:15", "08:15", "Breakfast");
 meditationKY(d);
 kids(d);
-cls(d, "09:45", "11:00", "Raising the Heart with our Inner Sun Power", "Kriya and Meditation", CHURUATA, CHRIS);
-cls(d, "09:45", "11:00", "Understanding the Science and Research on Yoga", "Lecture", TREE, SAT_BIR);
-cls(d, "11:15", "12:30", "SDI Gathering", "Workshop", CHURUATA, null, { description: SDI, tags: TBA });
-cls(d, "11:15", "12:30", "IKYTA Day", "Workshop", TREE, null, { description: IKYTA, tags: TBA });
+cls(d, "09:45", "11:00", "Raising the Heart with our Inner Sun Power", "Kriya and Meditation", CHURUATA, CHRIS, { description: D_CHRIS });
+cls(d, "09:45", "11:00", "Understanding the Science and Research on Yoga", "Lecture", TREE, SAT_BIR, { description: D_SAT_BIR });
+cls(d, "11:15", "12:30", "Mera Man Loche: The Soul's Longing for the Guru", "Mantras", CHURUATA, SAT_NAM, { description: D_SAT_NAM, language: "English / Spanish" }); // the slot the sheet first called "SDI"
+cls(d, "11:15", "12:30", "IKYTA Day", "Workshop", TREE, RAI, { description: IKYTA });
 meal(d, "12:30", "13:45", "Lunch", LUNCH);
 add(d, "12:30", "13:45", "WTY Monitors Meeting", { category: "White Tantric Yoga", location: CHURUATA, description: MONITORS });
 cls(d, "13:45", "17:00", "Sat Nam Rasayan", "Meditation", TANTRIC, SIRI_SIMRAN, { description: SNR });
@@ -147,7 +181,8 @@ rehras(d);
 meal(d, "17:30", "18:30", "Dinner");
 add(d, "17:30", "18:30", "WTY First Timers Meeting", { category: "White Tantric Yoga", location: TANTRIC, description: FIRST_TIMERS }); // Tantric Shelter (owner, 2026-10-29)
 karmaYoga(d);
-evening(d);
+eveningMusic(d, "3HO All-Star Music Jam", MUSIC_JAM);
+eveningGong(d, true);
 night(d);
 
 /* ------------------------------------------------------------- Thu 17 · Fri 18 · Sat 19 · White Tantric Yoga® */
@@ -158,10 +193,11 @@ for (const [date, n] of [["2026-12-17", "One"], ["2026-12-18", "Two"], ["2026-12
   gurdwara(date, "05:50", "07:00", GURD_WTY);
   meal(date, "07:00", "08:00", "Breakfast");
   add(date, "08:00", "17:30", `White Tantric Yoga® – Day ${n}`, { category: "White Tantric Yoga", location: TANTRIC, description: WTY });
-  kids(date, n === "One" ? KIDS_THU : KIDS_DESC);
+  kids(date, n === "Two" ? KIDS_FRI : KIDS_DESC); // Gurdwara tab: "Childrens camp 12-18-26 2:30" = Friday
   meal(date, "17:30", "18:30", "Dinner");
   karmaYoga(date);
-  evening(date);
+  eveningMusic(date, "Yogi Tea Café Open Mic", OPEN_MIC);
+  eveningGong(date, false);
   night(date);
 }
 
@@ -169,32 +205,34 @@ for (const [date, n] of [["2026-12-17", "One"], ["2026-12-18", "Two"], ["2026-12
 d = "2026-12-20";
 rise(d, "03:40");
 sadhana(d, "03:40", "06:00");
-gurdwara(d, "06:00", "07:15");
+gurdwaraFullDay(d);
 meal(d, "07:15", "08:15", "Breakfast");
 meditationKY(d);
 kids(d);
-cls(d, "09:45", "11:00", "Divine Mother: The Love That Holds Everything", "Kriya and Meditation", CHURUATA, DEVI);
+cls(d, "09:45", "11:00", "Divine Mother: The Love That Holds Everything", "Kriya and Meditation", CHURUATA, DEVI, { description: D_DEVI });
+cls(d, "09:45", "11:00", "Morning Sadhana: Developing a Daily Practice", "Workshop", TREE, SATWANT, { description: D_SATWANT });
 cls(d, "09:45", "11:00", "Men's Circle", "Community", INCO, CHIEF);
-cls(d, "11:15", "12:30", "Conscious Communication within Silence", "Meditation", CHURUATA, JOT_SIMRIT);
-cls(d, "11:15", "12:30", "Winter Solstice Glandular Summit", "Kriya and Meditation", TREE, DYAL);
-cls(d, "11:15", "12:30", "Women's Circle", "Community", INCO, null, { description: WOMEN, tags: TBA });
+cls(d, "11:15", "12:30", "Conscious Communication within Silence", "Meditation", CHURUATA, JOT_SIMRIT, { description: D_JOT });
+cls(d, "11:15", "12:30", "Winter Solstice Glandular Summit", "Kriya and Meditation", TREE, DYAL, { description: D_DYAL });
+cls(d, "11:15", "12:30", "Women's Circle", "Community", INCO, KIRET);
 meal(d, "12:30", "13:45", "Lunch", LUNCH);
-cls(d, "13:45", "15:30", "Rewiring Stress into Strength", "Kriya and Meditation", CHURUATA, HARIDASS, { description: ALL_CAMP }); // Churuata (owner, 2026-10-29)
-cls(d, "15:45", "17:00", "Rejuvenate: Emotional Balance & Alertness", "Kriya and Meditation", CHURUATA, KHUSHBIR);
-cls(d, "15:45", "17:00", "The Preserver", "Kriya and Meditation", TREE, KARUNA);
-cls(d, "15:45", "17:00", "Tantric Integration Circle", "Kriya and Meditation", INCO, null, { description: TANTRIC_INTEGRATION, tags: TBA });
+cls(d, "13:45", "15:30", "Rewiring Stress into Strength", "Kriya and Meditation", CHURUATA, HARIDASS, { description: D_HARIDASS }); // Churuata (owner, 2026-10-29)
+cls(d, "15:45", "17:00", "Rejuvenate: Emotional Balance & Alertness", "Kriya and Meditation", CHURUATA, KHUSHBIR, { description: D_KHUSHBIR });
+// The sheet now reads "Sat Kirin Kaur" where "The Preserver: Karuna" was (2026-11-19).
+cls(d, "15:45", "17:00", "Workshop with Sat Kirin Kaur", "Workshop", TREE, SAT_KIRIN, { description: SAT_KIRIN_CLASS, tags: TBA });
+cls(d, "15:45", "17:00", "Tantric Integration Circle", "Kriya and Meditation", INCO, SHAKTA, { description: TANTRIC_INTEGRATION });
 rehras(d);
 meal(d, "17:30", "18:30", "Dinner");
 add(d, "18:30", "19:30", "Closing Circle", { category: "Community", location: TANTRIC, description: CLOSING });
-add(d, "19:30", null, "Nagar Kirtan", { category: "Gurdwara", description: NAGAR, tags: TBA });
-add(d, "19:30", null, "Rensabai Kirtan", { category: "Music", location: GURDWARA, facilitator: KARINA, description: RENSABAI, tags: TBA });
+add(d, "19:30", "20:00", "Nagar Kirtan", { category: "Gurdwara", description: NAGAR }); // no time in the sheet: between the Closing Circle and Rensabai
+add(d, "20:00", null, "Rensabai Kirtan", { id: `${d}-1930-rensabai-kirtan`, category: "Music", location: GURDWARA, facilitator: KARINA, description: RENSABAI }); // "Rensabhai 8:00"
 night(d);
 
 /* ------------------------------------------------------------- Mon Dec 21 · departure */
 d = "2026-12-21";
 rise(d, "03:40");
 sadhana(d, "03:40", "06:00");
-gurdwara(d, "06:00", "07:15");
+gurdwaraFullDay(d, GURD_VOWS); // "Sikh/minister vows, morning Gurdwara on Dec 21st 645am"
 meal(d, "07:15", "08:15", "Breakfast");
 add(d, "08:15", null, "Start the Journey Home", { category: "Logistics", description: DEPART });
 
@@ -219,15 +257,32 @@ if (!fixture.venues.some((v) => v.id === "tree-pavilion")) {
   fixture.venues.push({ id: "tree-pavilion", name: TREE, description: "Open-air pavilion under the trees for workshops. Location on the map to be confirmed.", kind: "venue" });
 }
 
-// Teachers: the 12 presenters production already carries (same ids, so the CSV
-// updates rather than duplicates) plus the two the sheet adds, taken from the
-// summer booklet data.
+// Teachers: the 12 presenters production first carried (same ids, so the CSV
+// updates rather than duplicates), the ones the sheet names that the summer
+// booklet data already knows, and the new ones from the Teacher Needs tab.
 const PRODUCTION_TEACHERS = JSON.parse(readFileSync(join(ROOT, "references", "wsol26-teachers-production.json"), "utf8"));
 const summer = JSON.parse(readFileSync(SUMMER_TEACHERS, "utf8"));
-const extra = [CHIEF, KARINA].map((name) => {
+// `as` renames a summer record to the name the winter sheet uses.
+const FROM_SUMMER = [
+  { name: CHIEF },
+  { name: KARINA },
+  { name: RAI },
+  { name: SHAKTA },
+  { name: "SS Satkirin Kaur Khalsa", as: SAT_KIRIN, id: "sat-kirin-kaur", facilitatorNames: [SAT_KIRIN, "Satkirin Kaur", "Satkirin Kaur Khalsa", "SS Satkirin Kaur Khalsa"] },
+];
+const extra = FROM_SUMMER.map(({ name, as, id, facilitatorNames }) => {
   const t = summer.find((x) => x.name === name);
   if (!t) throw new Error(`summer teachers.json has no ${name}`);
-  return { id: t.id, name: t.name, facilitatorNames: t.facilitatorNames, bio: t.bio ?? "", country: t.country === "USA" ? "United States" : t.country, ...(t.photo ? { photo: t.photo } : {}) };
+  return { id: id ?? t.id, name: as ?? t.name, facilitatorNames: facilitatorNames ?? t.facilitatorNames, bio: t.bio ?? "", country: t.country === "USA" ? "United States" : t.country, ...(t.photo ? { photo: t.photo } : {}) };
+});
+// New this winter, from the "Teacher Needs" tab (bio as sent; the headshot is a Drive
+// link, so the photo has to be uploaded to the Media Library by hand).
+extra.push({
+  id: "sat-nam-kaur",
+  name: SAT_NAM,
+  facilitatorNames: [SAT_NAM, "Sat Nam Kaur Khalsa"],
+  bio: "Sat Nam Kaur is a second-generation member of the global Sangat and a certified teacher since 1997. Having lived in Mexico, Brazil, and Española, she currently serves as Khalsa Council Coordinator at Sikh Dharma International and as Director of the Kundalini Yoga Center in Guadalajara, Mexico.",
+  country: "Mexico",
 });
 fixture.teachers = [...PRODUCTION_TEACHERS, ...extra].sort((a, b) => a.name.localeCompare(b.name));
 
@@ -238,7 +293,7 @@ const facilitatorNames = new Set(fixture.teachers.flatMap((t) => t.facilitatorNa
 for (const item of items) {
   if (item.location && !venueNames.has(item.location)) throw new Error(`${item.id}: unknown venue ${item.location}`);
   if (item.category && !categoryNames.has(item.category)) throw new Error(`${item.id}: unknown category ${item.category}`);
-  if (item.facilitator && !facilitatorNames.has(item.facilitator)) throw new Error(`${item.id}: unknown facilitator ${item.facilitator}`);
+  if (item.facilitator && !facilitatorNames.has(item.facilitator) && !NO_PROFILE.has(item.facilitator)) throw new Error(`${item.id}: unknown facilitator ${item.facilitator}`);
 }
 
 items.sort((a, b) => a.date.localeCompare(b.date) || a.startTime.localeCompare(b.startTime) || (a.endTime ?? "").localeCompare(b.endTime ?? "") || a.title.localeCompare(b.title));

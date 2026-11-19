@@ -105,6 +105,21 @@ ships, its `Unreleased` bullets move into a dated section below — newest on to
 
 ### Changed
 
+- **WSOL26 program updated from the new master sheet** (fixture v12 → v13; `scripts/` and
+  docs only, no cache bump) — "Programming WSOL26 Team Master Doc", read 2026-11-19 and
+  diffed cell by cell against the October copy: 93 items, 9 still "To be announced" (were
+  21). Registration 2–8 PM and a Gurdwara program 2:00–5:30 PM on arrival day (the
+  "Orientation & First Sessions" placeholder is gone), Karma Yoga Action cut to 30 minutes,
+  full-day Gurdwara at 6:15 AM with the Akhand Paath starting Wednesday and Sikh / Minister
+  vows on Monday, *Mera Man Loche* with Sat Nam Kaur in the slot first called "SDI", IKYTA
+  Day with Rai Singh, *Morning Sadhana: Developing a Daily Practice* with Satwant Singh,
+  facilitators for the Women's and Tantric Integration circles, the 3HO All-Star Music Jam
+  on Wednesday and the Yogi Tea Café Open Mic on WTY nights, Rensabai at 8:00 PM, and
+  "Sat Kirin Kaur" where *The Preserver* (Karuna) was. Ten classes gain the description
+  their teacher sent (the sheet's Teacher Needs tab). Teachers 14 → 18. Session ids are now
+  **pinned** when a time or title changes, so favorites and reminders survive. Fixes the
+  Kids Camp Gurdwara visit, which the first transcription put on Thursday instead of Friday.
+  Details and open questions in `docs/WSOL26-PROGRAM.md`.
 - **Official app icon** (cache v89 → v90): the organization's real 1024 px
   3HO International art replaces the upscaled placeholder everywhere — native
   icon sets regenerated with `@capacitor/assets` (iOS + Android adaptive),
