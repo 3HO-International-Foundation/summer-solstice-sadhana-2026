@@ -16,6 +16,9 @@ ships, its `Unreleased` bullets move into a dated section below — newest on to
   `public/images/teachers/Sat-Nam-Kaur.jpg`, from the Drive link she sent with her class. Her
   WSOL26 teacher record points at it by absolute URL on the app's web deployment, so the
   website and every app build show it, including builds made before the file existed.
+  Imported into production as a one-row teachers update (content version 30). On 3ho.org
+  the event main page's hand-built "Teacher Lineup" grid went from 12 to the same 18
+  teachers as the program.
 - **Launch reels** (`video-manual/reels/`, HyperFrames; no app change, no cache bump) — three
   vertical 15–17 s videos for the app launch on social (The Big Reveal; Schedule & Favorites;
   Map & Offline) from the social team's script, on fresh captures of the official WSOL26

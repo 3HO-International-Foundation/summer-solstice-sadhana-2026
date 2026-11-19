@@ -262,9 +262,17 @@ import the public URL keeps serving the old program (`x-cache-status: HIT`) whil
 already has the new one. Open the page logged in and use **Purge Current Page** in the admin
 bar (it purges that URL only). Check with a logged-out request afterwards.
 
-The teacher grid on the event's main page (<https://www.3ho.org/winter-solstice-2026/>) is a
-separate hand-built block, not the plugin: it still lists the first 12 presenters and is
-not touched by an import.
+Sat Nam Kaur's photo followed the same day as a one-row teachers import in *Add or update*
+(content version 30).
+
+**The main page's teacher grid is separate.** "The Teacher Lineup" on
+<https://www.3ho.org/winter-solstice-2026/> is hand-written HTML inside that page's single
+Custom HTML block (page 99243, about 120 KB), not the plugin, so an import never touches
+it. It was brought from 12 to the same 18 teachers by hand on 2026-11-19: Siri Simran Kaur
+first, the rest alphabetical, the six added cards using the photos on the app's web
+deployment. It has to be edited again whenever the teacher list changes. Other people edit
+that page: change only the cards, compare the saved content with what was sent, and purge
+that page's cache afterwards too. Kiret Naam Kaur is not in the grid (no photo).
 
 ## Keeping it current
 
