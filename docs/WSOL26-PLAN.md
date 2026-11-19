@@ -289,7 +289,9 @@ live but **empty**.
       presenters with bios and photos. Reading decisions, open questions and the
       import order (venues, teachers, then program with Replace) in
       [WSOL26-PROGRAM.md](WSOL26-PROGRAM.md). **Imported into production the same
-      day** (content version 25: 92 sessions, 14 teachers, 23 venues). Open until the
+      day** (content version 25: 92 sessions, 14 teachers, 23 venues). **Updated
+      2026-11-19** from the team's new sheet and imported again (content version 29:
+      93 sessions, 18 teachers). Open until the
       "To be announced" items are filled from the programming team's answers.
 - [ ] **Teacher bios** — 33 of 34 bios are still empty (applies to both events). The
       profile "About" section appears automatically as soon as a bio exists. Done

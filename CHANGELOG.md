@@ -119,7 +119,9 @@ ships, its `Unreleased` bullets move into a dated section below — newest on to
   their teacher sent (the sheet's Teacher Needs tab). Teachers 14 → 18. Session ids are now
   **pinned** when a time or title changes, so favorites and reminders survive. Fixes the
   Kids Camp Gurdwara visit, which the first transcription put on Thursday instead of Friday.
-  Details and open questions in `docs/WSOL26-PROGRAM.md`.
+  Details and open questions in `docs/WSOL26-PROGRAM.md`. Imported into production the same
+  day (teachers in Add or update, program in Replace: 93 in, 3 retired; content version 29)
+  and the website's Program and Teachers page purged from the page cache.
 - **Official app icon** (cache v89 → v90): the organization's real 1024 px
   3HO International art replaces the upscaled placeholder everywhere — native
   icon sets regenerated with `@capacitor/assets` (iOS + Android adaptive),

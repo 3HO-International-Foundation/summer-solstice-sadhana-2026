@@ -250,6 +250,22 @@ Later that day the owner moved *WTY First Timers Meeting* to Tantric Shelter and
 Stress into Strength* to Churuata directly in wp-admin (content version 27); fixture v12 and
 the CSV carry the same venues, so the next Replace keeps them.
 
+**Done 2026-11-19** (fixture v13, plugin 0.12.1): teachers 18 in *Add or update* (content
+version 28; venues did not change and were not re-imported), then program in *Replace*,
+validated first: 93 imported, **3** retired (v29) — *Orientation & First Sessions*, *SDI
+Gathering* and *The Preserver*. The public bundle afterwards matches the fixture field by
+field: 93 sessions, 18 teachers, no duplicate ids, every venue and category joined, Kiret
+Naam Kaur the only facilitator without a profile.
+
+**The website needs one more step.** The page is behind the nginx page cache, so after an
+import the public URL keeps serving the old program (`x-cache-status: HIT`) while the app
+already has the new one. Open the page logged in and use **Purge Current Page** in the admin
+bar (it purges that URL only). Check with a logged-out request afterwards.
+
+The teacher grid on the event's main page (<https://www.3ho.org/winter-solstice-2026/>) is a
+separate hand-built block, not the plugin: it still lists the first 12 presenters and is
+not touched by an import.
+
 ## Keeping it current
 
 The sheet will change. Edit the transcription in `scripts/wsol26-official-program.mjs`
@@ -262,4 +278,6 @@ node scripts/wsol26-official-program.mjs && npm run fixtures:csv -- wsol26
 
 The script refuses to write when a `location`, `category` or `facilitator` does not match
 the fixture by name, so a typo cannot reach the app as a session without a venue or teacher.
-Then update this doc's open questions and the CHANGELOG, and re-import with Replace.
+When the sheet moves or renames a session, pin its id (see *Ids are pinned* above). Then
+update this doc's open questions and the CHANGELOG, re-import with Replace, and purge the
+website page's cache.
