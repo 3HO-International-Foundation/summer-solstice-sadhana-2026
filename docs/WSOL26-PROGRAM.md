@@ -36,7 +36,7 @@ The other tabs:
 | Artifact | Content |
 |---|---|
 | `scripts/wsol26-official-program.mjs` | The transcription: every session as code, with the reading decisions below. Run it to rewrite the fixture (it bumps `version`). |
-| `scripts/fixtures/wsol26.json` (v13) | `program` 93 items over Dec 15–21 (9 tagged "To be announced"), `venues` 23 (Inco Park promoted to a program venue, Tree Pavilion added), `teachers` 18. |
+| `scripts/fixtures/wsol26.json` (v14) | `program` 93 items over Dec 15–21 (9 tagged "To be announced"), `venues` 23 (Inco Park promoted to a program venue, Tree Pavilion added), `teachers` 18. |
 | `references/wsol26-teachers-production.json` | Snapshot of the 12 presenters production first carried (ids, names, name variants, bios, photos), so the fixture and the CSV reuse their ids. The other six come from the summer booklet data or the Teacher Needs tab (see the name table below). |
 | `scripts/fixtures/csv/wsol26-{program,venues,teachers}.csv` | What goes into **Event App → Import** (`npm run fixtures:csv -- wsol26`). |
 
@@ -143,7 +143,7 @@ Teacher names are written **exactly as production carries them** (the join is by
 | Devi Rajpriti Kaur, Jot Simrit, Dyal Gobinde, Satwant Singh | unchanged |
 | Chief Open Heart, Karina Skye, Rai Singh, Shakta Kaur | added from the summer data (photo, no bio yet) |
 | Sat Kirin Kaur | added from the summer data's "SS Satkirin Kaur Khalsa" (photo, no bio) — assumed to be the same person |
-| Sat Nam Kaur | new, from the Teacher Needs tab (bio, Mexico; her headshot is a Drive link, so no photo until it is uploaded to the Media Library) |
+| Sat Nam Kaur | new, from the Teacher Needs tab (bio, Mexico). Her headshot came as a Drive link and is kept in `public/images/teachers/Sat-Nam-Kaur.jpg`, referenced by its absolute URL on the app's web deployment so that app builds made before the file existed still load it |
 | Kiret Naam Kaur | no profile anywhere: published as plain text (`NO_PROFILE` in the script) |
 
 Venue names stay **uppercase as on the map and in production**: TANTRIC SHELTER, GURDWARA,
@@ -217,8 +217,8 @@ Read cell by cell against the 2026-10-29 copy (fixture v12 → v13, 92 → 93 it
     the grid's or the form's.
 13. **IKYTA Day** (Wed 11:15): what the session is.
 14. **Kids Camp** daily schedule (Youth camp tab is empty).
-15. **Profiles**: Kiret Naam Kaur (nothing yet); Sat Nam Kaur's photo; bios for Rai Singh,
-    Shakta Kaur, Sat Kirin Kaur, Chief Open Heart and Karina Skye.
+15. **Profiles**: Kiret Naam Kaur (nothing yet); bios for Rai Singh, Shakta Kaur, Sat Kirin
+    Kaur, Chief Open Heart and Karina Skye.
 16. **Tree Pavilion**: where it is on the map.
 17. A loose note ": Chris Maanas - Meditation" is still not placed anywhere.
 

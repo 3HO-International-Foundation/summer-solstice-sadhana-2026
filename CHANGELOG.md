@@ -12,6 +12,10 @@ ships, its `Unreleased` bullets move into a dated section below — newest on to
 
 ### Added
 
+- **Sat Nam Kaur's headshot** (cache v91 → v92, fixture v13 → v14) —
+  `public/images/teachers/Sat-Nam-Kaur.jpg`, from the Drive link she sent with her class. Her
+  WSOL26 teacher record points at it by absolute URL on the app's web deployment, so the
+  website and every app build show it, including builds made before the file existed.
 - **Launch reels** (`video-manual/reels/`, HyperFrames; no app change, no cache bump) — three
   vertical 15–17 s videos for the app launch on social (The Big Reveal; Schedule & Favorites;
   Map & Offline) from the social team's script, on fresh captures of the official WSOL26

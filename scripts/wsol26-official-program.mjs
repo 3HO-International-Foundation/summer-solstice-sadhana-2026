@@ -275,14 +275,17 @@ const extra = FROM_SUMMER.map(({ name, as, id, facilitatorNames }) => {
   if (!t) throw new Error(`summer teachers.json has no ${name}`);
   return { id: id ?? t.id, name: as ?? t.name, facilitatorNames: facilitatorNames ?? t.facilitatorNames, bio: t.bio ?? "", country: t.country === "USA" ? "United States" : t.country, ...(t.photo ? { photo: t.photo } : {}) };
 });
-// New this winter, from the "Teacher Needs" tab (bio as sent; the headshot is a Drive
-// link, so the photo has to be uploaded to the Media Library by hand).
+// New this winter, from the "Teacher Needs" tab (bio as sent). Her headshot came as a
+// Drive link; it is kept in public/images/teachers/ like the summer photos, but with an
+// absolute URL: app builds made before 2026-11-19 do not bundle the file, so the relative
+// path the summer photos use would 404 there.
 extra.push({
   id: "sat-nam-kaur",
   name: SAT_NAM,
   facilitatorNames: [SAT_NAM, "Sat Nam Kaur Khalsa"],
   bio: "Sat Nam Kaur is a second-generation member of the global Sangat and a certified teacher since 1997. Having lived in Mexico, Brazil, and Española, she currently serves as Khalsa Council Coordinator at Sikh Dharma International and as Director of the Kundalini Yoga Center in Guadalajara, Mexico.",
   country: "Mexico",
+  photo: "https://summer-solstice-sadhana-2026.vercel.app/images/teachers/Sat-Nam-Kaur.jpg",
 });
 fixture.teachers = [...PRODUCTION_TEACHERS, ...extra].sort((a, b) => a.name.localeCompare(b.name));
 
