@@ -114,9 +114,9 @@ ships, its `Unreleased` bullets move into a dated section below — newest on to
 
 - **WSOL26 program updates from the programming team, 2026-11-23** (fixture v14 → v15;
   `scripts/` and docs only, no cache bump) — 93 items. Titles: *All-Camp Meditation & Karma
-  Yoga / Team Meetings*, *Rehras Sahib*, Tuesday's dinner is *Langar*. New **LANGAR HALL**
+  Yoga / Team Meetings*, *Rehras Sahib*, Tuesday's dinner is *Langar*. New **DINING HALL**
   venue for every meal and for the WTY Monitors and First Timers meetings (was Churuata /
-  Tantric Shelter). The Tuesday Gurdwara sends people there for Guru Ka Langar.
+  Tantric Shelter). The Tuesday Gurdwara sends people there for Guru Ka Langar. It is in the Kitchen building; no pin of its own yet.
   **BAZAAR / YOGI TEA** renamed **BAZAAR / YOGI TEA CAFÉ** (same id). Arrival & Registration
   from 1:00 PM. Wed: Gurdwara from 6:00 AM with a Siri Singh Sahib lecture and the Akhand
   Paath / Sahej Paath sign-up contact. Chris Maanas and Sat Bir Singh swap venues. New

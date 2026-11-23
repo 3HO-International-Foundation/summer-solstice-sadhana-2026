@@ -33,7 +33,7 @@
       "title": "Gurdwara",
       "category": "Gurdwara",
       "location": "GURDWARA",
-      "description": "The Gurdwara opens the Solstice: Sukhmani Sahib 2:00–4:00 PM, Rehras Sahib 4:00–4:30 PM, then Anand Sahib, Ardas and Hukam 4:30–5:30 PM. All are welcome. Afterwards, go to the Langar Hall for Guru Ka Langar."
+      "description": "The Gurdwara opens the Solstice: Sukhmani Sahib 2:00–4:00 PM, Rehras Sahib 4:00–4:30 PM, then Anand Sahib, Ardas and Hukam 4:30–5:30 PM. All are welcome. Afterwards, go to the Dining Hall for Guru Ka Langar."
     },
     {
       "id": "2026-12-15-1730-dinner",
@@ -43,7 +43,7 @@
       "endTime": "18:30",
       "title": "🍴 Langar",
       "category": "Meal",
-      "location": "LANGAR HALL",
+      "location": "DINING HALL",
       "description": "Guru Ka Langar after the Gurdwara, served langar style."
     },
     {
@@ -122,7 +122,7 @@
       "endTime": "08:15",
       "title": "🍴 Breakfast",
       "category": "Meal",
-      "location": "LANGAR HALL"
+      "location": "DINING HALL"
     },
     {
       "id": "2026-12-16-0830-all-camp-meditation-karma-yoga-meetings",
@@ -206,7 +206,7 @@
       "endTime": "13:45",
       "title": "🍴 Lunch",
       "category": "Meal",
-      "location": "LANGAR HALL",
+      "location": "DINING HALL",
       "description": "Free time until the afternoon program."
     },
     {
@@ -217,7 +217,7 @@
       "endTime": "13:45",
       "title": "WTY Monitors Meeting",
       "category": "White Tantric Yoga",
-      "location": "LANGAR HALL",
+      "location": "DINING HALL",
       "description": "During lunch. Interested in being a Monitor at White Tantric Yoga® (WTY)? A WTY Monitor must have attended at least one day of WTY, wear white clothing and a white head covering, and wear the Monitor ID marker. Monitors receive the same benefits of WTY as if they were doing the meditations with a partner."
     },
     {
@@ -261,7 +261,7 @@
       "endTime": "18:30",
       "title": "🍴 Dinner",
       "category": "Meal",
-      "location": "LANGAR HALL"
+      "location": "DINING HALL"
     },
     {
       "id": "2026-12-16-1730-wty-first-timers-meeting",
@@ -271,7 +271,7 @@
       "endTime": "18:30",
       "title": "WTY First Timers Meeting",
       "category": "White Tantric Yoga",
-      "location": "LANGAR HALL",
+      "location": "DINING HALL",
       "description": "During dinner. First time at White Tantric Yoga®? Meet the WTY team and learn what to expect over the three days."
     },
     {
@@ -349,7 +349,7 @@
       "endTime": "08:00",
       "title": "🍴 Breakfast",
       "category": "Meal",
-      "location": "LANGAR HALL"
+      "location": "DINING HALL"
     },
     {
       "id": "2026-12-17-0800-white-tantric-yoga-day-one",
@@ -384,7 +384,7 @@
       "endTime": "18:30",
       "title": "🍴 Dinner",
       "category": "Meal",
-      "location": "LANGAR HALL",
+      "location": "DINING HALL",
       "description": "Served after the White Tantric Yoga® program."
     },
     {
@@ -476,7 +476,7 @@
       "endTime": "08:00",
       "title": "🍴 Breakfast",
       "category": "Meal",
-      "location": "LANGAR HALL"
+      "location": "DINING HALL"
     },
     {
       "id": "2026-12-18-0800-white-tantric-yoga-day-two",
@@ -511,7 +511,7 @@
       "endTime": "18:30",
       "title": "🍴 Dinner",
       "category": "Meal",
-      "location": "LANGAR HALL",
+      "location": "DINING HALL",
       "description": "Served after the White Tantric Yoga® program."
     },
     {
@@ -603,7 +603,7 @@
       "endTime": "08:00",
       "title": "🍴 Breakfast",
       "category": "Meal",
-      "location": "LANGAR HALL"
+      "location": "DINING HALL"
     },
     {
       "id": "2026-12-19-0800-white-tantric-yoga-day-three",
@@ -638,7 +638,7 @@
       "endTime": "18:30",
       "title": "🍴 Dinner",
       "category": "Meal",
-      "location": "LANGAR HALL",
+      "location": "DINING HALL",
       "description": "Served after the White Tantric Yoga® program."
     },
     {
@@ -730,7 +730,7 @@
       "endTime": "08:15",
       "title": "🍴 Breakfast",
       "category": "Meal",
-      "location": "LANGAR HALL"
+      "location": "DINING HALL"
     },
     {
       "id": "2026-12-20-0830-all-camp-meditation-karma-yoga-meetings",
@@ -835,7 +835,7 @@
       "endTime": "13:45",
       "title": "🍴 Lunch",
       "category": "Meal",
-      "location": "LANGAR HALL",
+      "location": "DINING HALL",
       "description": "Free time until the afternoon program."
     },
     {
@@ -908,7 +908,7 @@
       "endTime": "18:30",
       "title": "🍴 Dinner",
       "category": "Meal",
-      "location": "LANGAR HALL"
+      "location": "DINING HALL"
     },
     {
       "id": "2026-12-20-1830-closing-circle",
@@ -997,7 +997,7 @@
       "endTime": "08:15",
       "title": "🍴 Breakfast",
       "category": "Meal",
-      "location": "LANGAR HALL"
+      "location": "DINING HALL"
     },
     {
       "id": "2026-12-21-0815-start-the-journey-home",
@@ -1228,7 +1228,7 @@
     {
       "id": "churuata",
       "name": "CHURUATA",
-      "description": "Workshops, classes and the evening gong. Meals are in the Langar Hall.",
+      "description": "Workshops, classes and the evening gong. Meals are in the Dining Hall.",
       "mapPoint": {
         "x": 65.2,
         "y": 61.1
@@ -1460,9 +1460,9 @@
       "kind": "venue"
     },
     {
-      "id": "langar-hall",
-      "name": "LANGAR HALL",
-      "description": "Guru Ka Langar and all meals. Location on the map to be confirmed.",
+      "id": "dining-hall",
+      "name": "DINING HALL",
+      "description": "Guru Ka Langar and all meals, in the Kitchen building next to the Bazaar / Yogi Tea Café.",
       "kind": "venue"
     }
   ],

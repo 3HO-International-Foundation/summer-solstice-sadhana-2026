@@ -38,9 +38,10 @@ const INCO = "INCO PARK";
 const KIDS = "CHILDREN'S CAMP";
 const YOGI_TEA = "BAZAAR / YOGI TEA CAFÉ"; // was "BAZAAR / YOGI TEA" (owner, 2026-11-23)
 const OFFICE = "OFFICE";
-// Where Guru Ka Langar and every meal is served (owner, 2026-11-23). Not labelled on the
-// map artwork, so it is listed without a pin until someone points at it.
-const LANGAR_HALL = "LANGAR HALL";
+// Where Guru Ka Langar and every meal is served (owner, 2026-11-23): the Dining Hall, in
+// the Kitchen building. The map artwork labels that block "KITCHEN" only, so it is listed
+// without a pin of its own for now (owner: don't change the map yet).
+const DINING_HALL = "DINING HALL";
 
 /* ------------------------------------------------------------- teachers */
 // Names exactly as production (winter-solstice-2026) carries them, so the
@@ -80,7 +81,7 @@ const AKHAND_SIGNUP = "To sign up as a reader or sevadar, contact Maha Atma at m
 const GURD_AKHAND = `${GURD} With a Siri Singh Sahib lecture. The Akhand Paath / Sahej Paath, the reading of the Siri Guru Granth Sahib, begins at 6:30 AM. ${AKHAND_SIGNUP}`;
 const GURD_BHOG = `${GURD} Shorter on White Tantric Yoga® days. Bhog of the Akhand Paath / Sahej Paath at 6:15 AM.`;
 const GURD_VOWS = `${GURD} Sikh vows and Minister vows are taken this morning at 6:45 AM.`;
-const GURD_TUE = "The Gurdwara opens the Solstice: Sukhmani Sahib 2:00–4:00 PM, Rehras Sahib 4:00–4:30 PM, then Anand Sahib, Ardas and Hukam 4:30–5:30 PM. All are welcome. Afterwards, go to the Langar Hall for Guru Ka Langar.";
+const GURD_TUE = "The Gurdwara opens the Solstice: Sukhmani Sahib 2:00–4:00 PM, Rehras Sahib 4:00–4:30 PM, then Anand Sahib, Ardas and Hukam 4:30–5:30 PM. All are welcome. Afterwards, go to the Dining Hall for Guru Ka Langar.";
 const MEDITATION_KY = "A short all-camp meditation, then meet your Karma Yoga or Service Exchange team. All attendees have a karma yoga: it keeps the event sustainable and flowing. Unsure of yours? Ask at the event office.";
 const LUNCH = "Free time until the afternoon program.";
 const REHRAS = "Evening prayer, followed by Sukhasan (Hukam, Kirtan Sohila, Ardas).";
@@ -146,8 +147,8 @@ const gurdwara = (d, s, e, description = GURD, extra = {}) => add(d, s, e, "Gurd
 // Full days: Gurdwara moved from 6:00 to 6:15 AM (sheet, 2026-11-19); Wednesday's is back at
 // 6:00 (owner, 2026-11-23). The id stays.
 const gurdwaraFullDay = (d, description = GURD, start = "06:15") => gurdwara(d, start, "07:15", description, { id: `${d}-0600-gurdwara` });
-// Meals are served in the Langar Hall (owner, 2026-11-23; they sat at Churuata before).
-const meal = (d, s, e, name, description, extra = {}) => add(d, s, e, `🍴 ${name}`, { category: "Meal", location: LANGAR_HALL, description, ...extra });
+// Meals are served in the Dining Hall (owner, 2026-11-23; they sat at Churuata before).
+const meal = (d, s, e, name, description, extra = {}) => add(d, s, e, `🍴 ${name}`, { category: "Meal", location: DINING_HALL, description, ...extra });
 // Renamed "… Karma Yoga / Team Meetings" and "Rehras Sahib" (owner, 2026-11-23); ids stay.
 const meditationKY = (d) => add(d, "08:30", "09:30", "All-Camp Meditation & Karma Yoga / Team Meetings", { id: `${d}-0830-all-camp-meditation-karma-yoga-meetings`, category: "Community", location: TANTRIC, description: MEDITATION_KY });
 const kids = (d, description = KIDS_DESC) => add(d, "09:00", "17:00", "Kids Camp", { category: "Community", location: KIDS, description, tags: TBA });
@@ -187,12 +188,12 @@ cls(d, "09:45", "11:00", "Understanding the Science and Research on Yoga", "Lect
 cls(d, "11:15", "12:30", "Mera Man Loche: The Soul's Longing for the Guru", "Mantras", CHURUATA, SAT_NAM, { description: D_SAT_NAM, language: "English / Spanish" }); // the slot the sheet first called "SDI"
 cls(d, "11:15", "12:30", "IKYTA Day", "Workshop", TREE, RAI, { description: IKYTA });
 meal(d, "12:30", "13:45", "Lunch", LUNCH);
-add(d, "12:30", "13:45", "WTY Monitors Meeting", { category: "White Tantric Yoga", location: LANGAR_HALL, description: MONITORS }); // "@ Dining Hall" (sheet; owner, 2026-11-23)
+add(d, "12:30", "13:45", "WTY Monitors Meeting", { category: "White Tantric Yoga", location: DINING_HALL, description: MONITORS }); // "@ Dining Hall" (sheet; owner, 2026-11-23)
 cls(d, "13:45", "17:00", "Sat Nam Rasayan", "Meditation", TANTRIC, SIRI_SIMRAN, { description: SNR });
 add(d, "15:45", "17:00", "Ministers Gathering", { category: "Community", location: CHURUATA }); // owner, 2026-11-23 ("3:45-54" read as 3:45–5:00)
 rehras(d);
 meal(d, "17:30", "18:30", "Dinner");
-add(d, "17:30", "18:30", "WTY First Timers Meeting", { category: "White Tantric Yoga", location: LANGAR_HALL, description: FIRST_TIMERS }); // Langar Hall (owner, 2026-11-23)
+add(d, "17:30", "18:30", "WTY First Timers Meeting", { category: "White Tantric Yoga", location: DINING_HALL, description: FIRST_TIMERS }); // Dining Hall (owner, 2026-11-23)
 karmaYoga(d);
 eveningMusic(d, "3HO All-Star Music Jam", MUSIC_JAM);
 // No Evening Gong on the 16th (owner, 2026-11-23).
@@ -278,9 +279,9 @@ yogiTea.name = YOGI_TEA;
 yogiTea.description = "Bazaar stalls and the Yogi Tea Café: Yogi Tea and evening music.";
 const churuata = fixture.venues.find((v) => v.id === "churuata");
 if (!churuata) throw new Error("fixture has no churuata venue");
-churuata.description = "Workshops, classes and the evening gong. Meals are in the Langar Hall.";
-if (!fixture.venues.some((v) => v.id === "langar-hall")) {
-  fixture.venues.push({ id: "langar-hall", name: LANGAR_HALL, description: "Guru Ka Langar and all meals. Location on the map to be confirmed.", kind: "venue" });
+churuata.description = "Workshops, classes and the evening gong. Meals are in the Dining Hall.";
+if (!fixture.venues.some((v) => v.id === "dining-hall")) {
+  fixture.venues.push({ id: "dining-hall", name: DINING_HALL, description: "Guru Ka Langar and all meals, in the Kitchen building next to the Bazaar / Yogi Tea Café.", kind: "venue" });
 }
 
 // Teachers: the 12 presenters production first carried (same ids, so the CSV

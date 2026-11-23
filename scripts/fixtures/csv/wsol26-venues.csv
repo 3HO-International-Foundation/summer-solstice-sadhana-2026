@@ -1,7 +1,7 @@
 id,name,description,mapX,mapY,color,number,featured,kind
 tantric-shelter,TANTRIC SHELTER,White Tantric Yoga® hall. Doors close when a kriya begins and stay closed until it ends.,21.7,66.6,#ffffff,1,1,
 asta,ASTA,"Main program space: Sadhana, kriyas, lectures and the Solstice night chant.",56.8,56.8,#c9714f,2,2,
-churuata,CHURUATA,"Workshops, classes and the evening gong. Meals are in the Langar Hall.",65.2,61.1,#8b4a2b,3,3,
+churuata,CHURUATA,"Workshops, classes and the evening gong. Meals are in the Dining Hall.",65.2,61.1,#8b4a2b,3,3,
 gurdwara,GURDWARA,"Head covered, shoes off. Open all day for quiet meditation; Kirtan each evening.",84.9,40.4,#a3261d,4,4,
 campfire,CAMPFIRE,"Evening gatherings under the sky: storytelling, circles and the bazaar hours.",63.2,88.5,#2b4d8c,5,,
 childrens-camp,CHILDREN'S CAMP,Youth and family program. Parents check children in and out.,30.2,79,#b8402f,6,,
@@ -22,4 +22,4 @@ cabins-8-13,CABINS 8–13,,72.9,47.6,#4a8f3f,20,,landmark
 cabins-14-20,CABINS 14–20,,52.5,46.9,#4a8f3f,21,,landmark
 cabins-21-28,CABINS 21–28,,19.9,83.7,#4a8f3f,22,,landmark
 tree-pavilion,TREE PAVILION,Open-air pavilion under the trees for workshops. Location on the map to be confirmed.,,,,,,venue
-langar-hall,LANGAR HALL,Guru Ka Langar and all meals. Location on the map to be confirmed.,,,,,,venue
+dining-hall,DINING HALL,"Guru Ka Langar and all meals, in the Kitchen building next to the Bazaar / Yogi Tea Café.",,,,,,venue
