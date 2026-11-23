@@ -124,7 +124,7 @@ ships, its `Unreleased` bullets move into a dated section below — newest on to
   5:50–6:50. Saturday's Gurdwara carries the Bhog at 6:15 AM. WTY-day dinners note they come
   after the program. Rensabai is with "Multiple Artists" (Karina Skye, Livtar Singh, Japa
   Kaur, Sat Kiran). Karuna is off the teacher list (17 teachers). Renamed or moved sessions
-  keep their ids.
+  keep their ids. Imported into production the same day (content version 33).
 - **WSOL26 program updated from the new master sheet** (fixture v12 → v13; `scripts/` and
   docs only, no cache bump) — "Programming WSOL26 Team Master Doc", read 2026-11-19 and
   diffed cell by cell against the October copy: 93 items, 9 still "To be announced" (were

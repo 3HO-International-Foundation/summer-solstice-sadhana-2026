@@ -293,6 +293,14 @@ bar (it purges that URL only). Check with a logged-out request afterwards.
 Sat Nam Kaur's photo followed the same day as a one-row teachers import in *Add or update*
 (content version 30).
 
+**Done 2026-11-23** (fixture v15, the owner's 17 changes): venues 24 in *Add or update*
+(Dining Hall added, Yogi Tea Café renamed in place; content version 31), teachers 17 in
+**Replace** (Karuna retired; v32), program 93 in *Replace*, validated first (Wednesday's
+Evening Gong retired; v33). The public bundle afterwards matches the fixture field by field;
+the only facilitators without a profile are Kiret Naam Kaur and "Multiple Artists". The
+program page's cache was purged and serves the new program logged out. Karuna's card in the
+main page's hand-written Teacher Lineup still needs removing (17 cards left once it is).
+
 **The main page's teacher grid is separate.** "The Teacher Lineup" on
 <https://www.3ho.org/winter-solstice-2026/> is hand-written HTML inside that page's single
 Custom HTML block (page 99243, about 120 KB), not the plugin, so an import never touches
