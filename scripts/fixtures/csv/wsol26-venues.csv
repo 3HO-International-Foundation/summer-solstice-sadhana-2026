@@ -6,7 +6,7 @@ gurdwara,GURDWARA,"Head covered, shoes off. Open all day for quiet meditation; K
 campfire,CAMPFIRE,"Evening gatherings under the sky: storytelling, circles and the bazaar hours.",63.2,88.5,#2b4d8c,5,,
 childrens-camp,CHILDREN'S CAMP,Youth and family program. Parents check children in and out.,30.2,79,#b8402f,6,,
 first-aid,FIRST AID,Medical help and the hospitality desk.,47.6,58.5,#c8322b,7,5,landmark
-kitchen,KITCHEN,,39.1,51.9,#f7c600,8,,landmark
+kitchen,KITCHEN,,39.8,45.6,#f7c600,8,,landmark
 bazaar-yogi-tea,BAZAAR / YOGI TEA CAFÉ,Bazaar stalls and the Yogi Tea Café: Yogi Tea and evening music.,40.6,58.2,#f2d24b,9,,landmark
 restrooms,RESTROOMS,,31.4,58.8,#2b4d8c,10,,landmark
 pool,POOL,,31.6,67.1,#4fb8d8,11,,landmark
@@ -22,4 +22,4 @@ cabins-8-13,CABINS 8–13,,72.9,47.6,#4a8f3f,20,,landmark
 cabins-14-20,CABINS 14–20,,52.5,46.9,#4a8f3f,21,,landmark
 cabins-21-28,CABINS 21–28,,19.9,83.7,#4a8f3f,22,,landmark
 tree-pavilion,TREE PAVILION,Open-air pavilion under the trees for workshops. Location on the map to be confirmed.,,,,,,venue
-dining-hall,DINING HALL,"Guru Ka Langar and all meals, in the Kitchen building next to the Bazaar / Yogi Tea Café.",,,,,,venue
+dining-hall,DINING HALL,"Guru Ka Langar and all meals, in the Kitchen building next to the Bazaar / Yogi Tea Café.",38,51.4,#f7c600,23,,venue

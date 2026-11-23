@@ -36,7 +36,7 @@ The other tabs:
 | Artifact | Content |
 |---|---|
 | `scripts/wsol26-official-program.mjs` | The transcription: every session as code, with the reading decisions below. Run it to rewrite the fixture (it bumps `version`). |
-| `scripts/fixtures/wsol26.json` (v15) | `program` 93 items over Dec 15–21 (9 tagged "To be announced"), `venues` 24 (Inco Park promoted to a program venue, Tree Pavilion and Dining Hall added), `teachers` 17. |
+| `scripts/fixtures/wsol26.json` (v16) | `program` 93 items over Dec 15–21 (9 tagged "To be announced"), `venues` 24 (Inco Park promoted to a program venue, Tree Pavilion and Dining Hall added), `teachers` 17. |
 | `references/wsol26-teachers-production.json` | Snapshot of the 12 presenters production first carried (ids, names, name variants, bios, photos), so the fixture and the CSV reuse their ids. The other six come from the summer booklet data or the Teacher Needs tab (see the name table below). |
 | `scripts/fixtures/csv/wsol26-{program,venues,teachers}.csv` | What goes into **Event App → Import** (`npm run fixtures:csv -- wsol26`). |
 
@@ -177,8 +177,9 @@ Not from the sheet: a list of 17 changes sent by the owner (fixture v14 → v15,
 - **Titles:** *All-Camp Meditation & Karma Yoga / Team Meetings* (Wed, Sun); *Rehras Sahib*
   (also inside Tuesday's Gurdwara text); Tuesday's dinner is *Langar* ("Guru Ka Langar
   after the Gurdwara"). Ids pinned.
-- **Venues:** new **DINING HALL**, in the Kitchen building (no pin of its own: the owner asked
-  not to change the map yet), for every meal, the WTY Monitors Meeting
+- **Venues:** new **DINING HALL**, in the Kitchen building (pinned the same day, fixture v16:
+  pin 23 in the lower part of the yellow block, where the team's newer map labels it, and the
+  Kitchen pin moved to the block's top part), for every meal, the WTY Monitors Meeting
   ("@ Dining Hall", as the sheet now says) and the WTY First Timers Meeting; Tuesday's
   Gurdwara ends "go to the Dining Hall for Guru Ka Langar". **BAZAAR / YOGI TEA** is
   **BAZAAR / YOGI TEA CAFÉ** (same id, so the import renames it). Wed 9:45: Chris Maanas at
@@ -246,8 +247,7 @@ Read cell by cell against the 2026-10-29 copy (fixture v12 → v13, 92 → 93 it
 14. **Kids Camp** daily schedule (Youth camp tab is empty).
 15. **Profiles**: Kiret Naam Kaur (nothing yet); bios for Rai Singh, Shakta Kaur, Sat Kirin
     Kaur, Chief Open Heart and Karina Skye.
-16. **Tree Pavilion**: where it is on the map. **Dining Hall**: pin it on the yellow Kitchen block
-    (the team's newer map labels it there) when the map is updated.
+16. **Tree Pavilion**: where it is on the map. (The Dining Hall is pinned since 2026-11-23.)
 17. A loose note ": Chris Maanas - Meditation" is still not placed anywhere.
 
 ## Importing into production

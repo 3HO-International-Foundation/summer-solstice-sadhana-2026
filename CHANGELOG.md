@@ -112,6 +112,10 @@ ships, its `Unreleased` bullets move into a dated section below — newest on to
 
 ### Changed
 
+- **WSOL26 Dining Hall on the map** (fixture v15 → v16; `scripts/` and docs only, no cache
+  bump) — pin 23 in the lower part of the yellow Kitchen block, where the team's newer map
+  labels it; the Kitchen pin (8) moves to the block's top part so the tap targets do not
+  overlap. Venues re-imported into production.
 - **WSOL26 program updates from the programming team, 2026-11-23** (fixture v14 → v15;
   `scripts/` and docs only, no cache bump) — 93 items. Titles: *All-Camp Meditation & Karma
   Yoga / Team Meetings*, *Rehras Sahib*, Tuesday's dinner is *Langar*. New **DINING HALL**

@@ -1,7 +1,7 @@
 {
   "_comment": "Dummy WSOL26 bundle for local testing. Event metadata (name, dates, venue) and the White Tantric Yoga days (Dec 17-19) mirror the real registration system. The PROGRAM, VENUES and TEACHERS are the official Winter Solstice 2026 program as read from the programming team's master sheet, written by scripts/wsol26-official-program.mjs (reading decisions and open questions in docs/WSOL26-PROGRAM.md); items tagged 'To be announced' are the ones the sheet leaves open. Info pages and menus are interim. Venue map pins are measured on the real map artwork (references/winter-solstice-map-revised-v3.jpg, served by the mock as /photos/wsol26-map.jpg). Served by scripts/mock-backend.mjs and convertible to CSV with scripts/fixture-to-csv.mjs. See docs/CONTENT-MODEL.md.",
   "ok": true,
-  "version": 15,
+  "version": 16,
   "event": {
     "slug": "wsol26",
     "name": "Winter Solstice Sadhana Celebration 2026",
@@ -1288,8 +1288,8 @@
       "id": "kitchen",
       "name": "KITCHEN",
       "mapPoint": {
-        "x": 39.1,
-        "y": 51.9
+        "x": 39.8,
+        "y": 45.6
       },
       "color": "#f7c600",
       "number": 8,
@@ -1463,6 +1463,12 @@
       "id": "dining-hall",
       "name": "DINING HALL",
       "description": "Guru Ka Langar and all meals, in the Kitchen building next to the Bazaar / Yogi Tea Café.",
+      "mapPoint": {
+        "x": 38,
+        "y": 51.4
+      },
+      "color": "#f7c600",
+      "number": 23,
       "kind": "venue"
     }
   ],

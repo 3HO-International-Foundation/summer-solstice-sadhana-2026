@@ -39,8 +39,9 @@ const KIDS = "CHILDREN'S CAMP";
 const YOGI_TEA = "BAZAAR / YOGI TEA CAFÉ"; // was "BAZAAR / YOGI TEA" (owner, 2026-11-23)
 const OFFICE = "OFFICE";
 // Where Guru Ka Langar and every meal is served (owner, 2026-11-23): the Dining Hall, in
-// the Kitchen building. The map artwork labels that block "KITCHEN" only, so it is listed
-// without a pin of its own for now (owner: don't change the map yet).
+// the Kitchen building. The map artwork labels that yellow block "KITCHEN" only; the team's
+// newer map puts KITCHEN in its top part and DINING HALL in the lower part, so the pins
+// follow that (see the venues section below).
 const DINING_HALL = "DINING HALL";
 
 /* ------------------------------------------------------------- teachers */
@@ -280,9 +281,14 @@ yogiTea.description = "Bazaar stalls and the Yogi Tea Café: Yogi Tea and evenin
 const churuata = fixture.venues.find((v) => v.id === "churuata");
 if (!churuata) throw new Error("fixture has no churuata venue");
 churuata.description = "Workshops, classes and the evening gong. Meals are in the Dining Hall.";
-if (!fixture.venues.some((v) => v.id === "dining-hall")) {
-  fixture.venues.push({ id: "dining-hall", name: DINING_HALL, description: "Guru Ka Langar and all meals, in the Kitchen building next to the Bazaar / Yogi Tea Café.", kind: "venue" });
-}
+// Pinned on the map (owner, 2026-11-23): Dining Hall in the lower part of the yellow block,
+// where the artwork's "KITCHEN" label sits; the Kitchen pin moves up to the block's top part
+// so the two 48 px tap targets do not overlap.
+const kitchen = fixture.venues.find((v) => v.id === "kitchen");
+if (!kitchen) throw new Error("fixture has no kitchen venue");
+kitchen.mapPoint = { x: 39.8, y: 45.6 };
+fixture.venues = fixture.venues.filter((v) => v.id !== "dining-hall");
+fixture.venues.push({ id: "dining-hall", name: DINING_HALL, description: "Guru Ka Langar and all meals, in the Kitchen building next to the Bazaar / Yogi Tea Café.", mapPoint: { x: 38.0, y: 51.4 }, color: "#f7c600", number: 23, kind: "venue" });
 
 // Teachers: the 12 presenters production first carried (same ids, so the CSV
 // updates rather than duplicates), the ones the sheet names that the summer
