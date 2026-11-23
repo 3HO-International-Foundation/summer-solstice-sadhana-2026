@@ -298,8 +298,9 @@ Sat Nam Kaur's photo followed the same day as a one-row teachers import in *Add 
 **Replace** (Karuna retired; v32), program 93 in *Replace*, validated first (Wednesday's
 Evening Gong retired; v33). The public bundle afterwards matches the fixture field by field;
 the only facilitators without a profile are Kiret Naam Kaur and "Multiple Artists". The
-program page's cache was purged and serves the new program logged out. Karuna's card in the
-main page's hand-written Teacher Lineup still needs removing (17 cards left once it is).
+program page's cache was purged and serves the new program logged out. Karuna's card was then
+taken out of the main page's hand-written Teacher Lineup (only that card; the saved content
+matches what was sent), leaving 17 cards, and that page's cache was purged too.
 
 **The main page's teacher grid is separate.** "The Teacher Lineup" on
 <https://www.3ho.org/winter-solstice-2026/> is hand-written HTML inside that page's single
