@@ -112,6 +112,19 @@ ships, its `Unreleased` bullets move into a dated section below — newest on to
 
 ### Changed
 
+- **WSOL26 program updates from the programming team, 2026-11-23** (fixture v14 → v15;
+  `scripts/` and docs only, no cache bump) — 93 items. Titles: *All-Camp Meditation & Karma
+  Yoga / Team Meetings*, *Rehras Sahib*, Tuesday's dinner is *Langar*. New **LANGAR HALL**
+  venue for every meal and for the WTY Monitors and First Timers meetings (was Churuata /
+  Tantric Shelter). The Tuesday Gurdwara sends people there for Guru Ka Langar.
+  **BAZAAR / YOGI TEA** renamed **BAZAAR / YOGI TEA CAFÉ** (same id). Arrival & Registration
+  from 1:00 PM. Wed: Gurdwara from 6:00 AM with a Siri Singh Sahib lecture and the Akhand
+  Paath / Sahej Paath sign-up contact. Chris Maanas and Sat Bir Singh swap venues. New
+  *Ministers Gathering* 3:45–5:00 PM at Churuata. No Evening Gong. Thu–Fri Gurdwara
+  5:50–6:50. Saturday's Gurdwara carries the Bhog at 6:15 AM. WTY-day dinners note they come
+  after the program. Rensabai is with "Multiple Artists" (Karina Skye, Livtar Singh, Japa
+  Kaur, Sat Kiran). Karuna is off the teacher list (17 teachers). Renamed or moved sessions
+  keep their ids.
 - **WSOL26 program updated from the new master sheet** (fixture v12 → v13; `scripts/` and
   docs only, no cache bump) — "Programming WSOL26 Team Master Doc", read 2026-11-19 and
   diffed cell by cell against the October copy: 93 items, 9 still "To be announced" (were

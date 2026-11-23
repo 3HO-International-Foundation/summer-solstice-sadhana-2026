@@ -36,8 +36,11 @@ const CHURUATA = "CHURUATA";
 const TREE = "TREE PAVILION";
 const INCO = "INCO PARK";
 const KIDS = "CHILDREN'S CAMP";
-const YOGI_TEA = "BAZAAR / YOGI TEA";
+const YOGI_TEA = "BAZAAR / YOGI TEA CAFÉ"; // was "BAZAAR / YOGI TEA" (owner, 2026-11-23)
 const OFFICE = "OFFICE";
+// Where Guru Ka Langar and every meal is served (owner, 2026-11-23). Not labelled on the
+// map artwork, so it is listed without a pin until someone points at it.
+const LANGAR_HALL = "LANGAR HALL";
 
 /* ------------------------------------------------------------- teachers */
 // Names exactly as production (winter-solstice-2026) carries them, so the
@@ -60,7 +63,10 @@ const SAT_KIRIN = "Sat Kirin Kaur";
 // Named in the sheet but without a profile yet (no bio or photo anywhere): shown
 // as plain text in the app until the team sends one.
 const KIRET = "Kiret Naam Kaur";
-const NO_PROFILE = new Set([KIRET]);
+// Rensabai has several musicians; `facilitator` holds one name, so it reads "Multiple
+// Artists" and the description names them (owner, 2026-11-23).
+const MULTIPLE = "Multiple Artists";
+const NO_PROFILE = new Set([KIRET, MULTIPLE]);
 
 /* ----------------------------------------------------------------- copy */
 const TBA = ["To be announced"];
@@ -70,19 +76,21 @@ const SADHANA = "Japji Sahib, a Kundalini Yoga kriya and the Aquarian Sadhana ma
 const SADHANA_WTY = `${SADHANA} Shorter on White Tantric Yoga® days.`;
 const GURD = "Gurdwara is a sacred space of Shabad (sound current), sangat (community), and seva (service). Whether this is your first time or a treasured tradition, you're invited to sit together in remembrance, sing the Naam, and bathe the mind in Gurbani kirtan. All are welcome.";
 const GURD_WTY = `${GURD} Shorter on White Tantric Yoga® days.`;
-const GURD_AKHAND = `${GURD} The Akhand Paath, the continuous reading of the Siri Guru Granth Sahib, begins at 6:30 AM.`;
+const AKHAND_SIGNUP = "To sign up as a reader or sevadar, contact Maha Atma at mahankaur6@gmail.com.";
+const GURD_AKHAND = `${GURD} With a Siri Singh Sahib lecture. The Akhand Paath / Sahej Paath, the reading of the Siri Guru Granth Sahib, begins at 6:30 AM. ${AKHAND_SIGNUP}`;
+const GURD_BHOG = `${GURD} Shorter on White Tantric Yoga® days. Bhog of the Akhand Paath / Sahej Paath at 6:15 AM.`;
 const GURD_VOWS = `${GURD} Sikh vows and Minister vows are taken this morning at 6:45 AM.`;
-const GURD_TUE = "The Gurdwara opens the Solstice: Sukhmani Sahib 2:00–4:00 PM, Rehras 4:00–4:30 PM, then Anand Sahib, Ardas and Hukam 4:30–5:30 PM. All are welcome.";
+const GURD_TUE = "The Gurdwara opens the Solstice: Sukhmani Sahib 2:00–4:00 PM, Rehras Sahib 4:00–4:30 PM, then Anand Sahib, Ardas and Hukam 4:30–5:30 PM. All are welcome. Afterwards, go to the Langar Hall for Guru Ka Langar.";
 const MEDITATION_KY = "A short all-camp meditation, then meet your Karma Yoga or Service Exchange team. All attendees have a karma yoga: it keeps the event sustainable and flowing. Unsure of yours? Ask at the event office.";
 const LUNCH = "Free time until the afternoon program.";
 const REHRAS = "Evening prayer, followed by Sukhasan (Hukam, Kirtan Sohila, Ardas).";
 const WTY = "Gates open 7:15 AM, warm-ups 8:00 AM. Wear white clothing and a white head covering. Lunch is served midday. Doors close when a meditation begins and reopen when it ends.";
 const MONITORS = "During lunch. Interested in being a Monitor at White Tantric Yoga® (WTY)? A WTY Monitor must have attended at least one day of WTY, wear white clothing and a white head covering, and wear the Monitor ID marker. Monitors receive the same benefits of WTY as if they were doing the meditations with a partner.";
 const FIRST_TIMERS = "During dinner. First time at White Tantric Yoga®? Meet the WTY team and learn what to expect over the three days.";
-const SNR = "In this experience, explore Sat Nam Rasayan® through meditation, breath, and partnered healing. Develop subtle awareness, presence, and intuition while supporting your own healing and others. Experience deep relaxation, nervous system regulation, and greater clarity, peace, and inner spaciousness. All camp together, no parallel classes, with a short break at 3:30 PM.";
-const ALL_CAMP = "All camp together, no parallel classes.";
+const SNR = "In this experience, explore Sat Nam Rasayan® through meditation, breath, and partnered healing. Develop subtle awareness, presence, and intuition while supporting your own healing and others. Experience deep relaxation, nervous system regulation, and greater clarity, peace, and inner spaciousness. All camp together, with a short break at 3:30 PM.";const ALL_CAMP = "All camp together, no parallel classes.";
 const CHECKIN = "Have your ticket QR code and a photo ID ready. If you don't have a service exchange or karma yoga team yet, one will be assigned at check-in.";
-const DINNER_LANGAR = "Served langar style.";
+const DINNER_LANGAR = "Guru Ka Langar after the Gurdwara, served langar style.";
+const DINNER_WTY = "Served after the White Tantric Yoga® program.";
 const OPENING = "Come open the space with us! Welcome home, welcome back. Join the teachers to open this Winter Solstice Celebration with music, laughter, meditation and joy.";
 const KIDS_DESC = "Program for children and youth while the adults are in class. Parents check children in and out. Daily schedule to be announced.";
 const KIDS_FRI = `${KIDS_DESC} Today the Kids Camp visits the Gurdwara at 2:30 PM.`;
@@ -95,7 +103,7 @@ const TANTRIC_INTEGRATION = "Integrate the three days of White Tantric Yoga®.";
 const SAT_KIRIN_CLASS = "Class title and details to be announced.";
 const CLOSING = "All camp together to close the Solstice, leading into Nagar Kirtan.";
 const NAGAR = "Kirtan procession through camp from the Closing Circle to the Gurdwara, where Rensabai begins at 8:00 PM.";
-const RENSABAI = "Rensabai Kirtan: musicians take turns singing Gurbani through the night.";
+const RENSABAI = "Rensabai Kirtan: musicians take turns singing Gurbani through the night, with Karina Skye, Livtar Singh, Japa Kaur and Sat Kiran.";
 const DEPART = "Everyone who is not helping with camp tear-down leaves the site in the morning. Travel day: no afternoon or evening program.";
 
 /* --------------------------------------------------- class descriptions */
@@ -135,12 +143,15 @@ function add(date, startTime, endTime, title, { id, category, location, facilita
 const rise = (d, end) => add(d, "03:00", end, "Rise up sweet family dear!", { description: RISE });
 const sadhana = (d, s, e, extra = {}) => add(d, s, e, "Aquarian Sadhana", { category: "Sadhana", location: TANTRIC, description: SADHANA, ...extra });
 const gurdwara = (d, s, e, description = GURD, extra = {}) => add(d, s, e, "Gurdwara", { category: "Gurdwara", location: GURDWARA, description, ...extra });
-// Full days: Gurdwara moved from 6:00 to 6:15 AM (sheet, 2026-11-19); the id stays.
-const gurdwaraFullDay = (d, description = GURD) => gurdwara(d, "06:15", "07:15", description, { id: `${d}-0600-gurdwara` });
-const meal = (d, s, e, name, description) => add(d, s, e, `🍴 ${name}`, { category: "Meal", location: CHURUATA, description });
-const meditationKY = (d) => add(d, "08:30", "09:30", "All-Camp Meditation & Karma Yoga Meetings", { category: "Community", location: TANTRIC, description: MEDITATION_KY });
+// Full days: Gurdwara moved from 6:00 to 6:15 AM (sheet, 2026-11-19); Wednesday's is back at
+// 6:00 (owner, 2026-11-23). The id stays.
+const gurdwaraFullDay = (d, description = GURD, start = "06:15") => gurdwara(d, start, "07:15", description, { id: `${d}-0600-gurdwara` });
+// Meals are served in the Langar Hall (owner, 2026-11-23; they sat at Churuata before).
+const meal = (d, s, e, name, description, extra = {}) => add(d, s, e, `🍴 ${name}`, { category: "Meal", location: LANGAR_HALL, description, ...extra });
+// Renamed "… Karma Yoga / Team Meetings" and "Rehras Sahib" (owner, 2026-11-23); ids stay.
+const meditationKY = (d) => add(d, "08:30", "09:30", "All-Camp Meditation & Karma Yoga / Team Meetings", { id: `${d}-0830-all-camp-meditation-karma-yoga-meetings`, category: "Community", location: TANTRIC, description: MEDITATION_KY });
 const kids = (d, description = KIDS_DESC) => add(d, "09:00", "17:00", "Kids Camp", { category: "Community", location: KIDS, description, tags: TBA });
-const rehras = (d) => add(d, "17:00", "17:30", "Rehras", { category: "Gurdwara", location: GURDWARA, description: REHRAS });
+const rehras = (d) => add(d, "17:00", "17:30", "Rehras Sahib", { id: `${d}-1700-rehras`, category: "Gurdwara", location: GURDWARA, description: REHRAS });
 const karmaYoga = (d) => add(d, "18:30", "19:00", "Karma Yoga Action", { category: "Service" });
 // Evening slots keep the ids of the placeholders they replace ("Yogi Tea Café Music",
 // whose slug dropped the é: "yogi-tea-caf-music", and "Gong Meditation"). The gong is written in the grid for Wednesday only; the row label
@@ -155,9 +166,9 @@ const cls = (d, s, e, title, category, location, facilitator, extra = {}) => add
 
 /* ------------------------------------------------------------- Tue Dec 15 · arrival */
 let d = "2026-12-15";
-add(d, "14:00", "20:00", "Arrival & Registration", { id: `${d}-1300-arrival-registration`, category: "Logistics", location: OFFICE, description: CHECKIN }); // "Registration: 2-8 pm"
+add(d, "13:00", "20:00", "Arrival & Registration", { id: `${d}-1300-arrival-registration`, category: "Logistics", location: OFFICE, description: CHECKIN }); // from 1:00 PM (owner, 2026-11-23; the sheet says 2-8 pm)
 gurdwara(d, "14:00", "17:30", GURD_TUE);
-meal(d, "17:30", "18:30", "Dinner", DINNER_LANGAR);
+meal(d, "17:30", "18:30", "Langar", DINNER_LANGAR, { id: `${d}-1730-dinner` }); // "Instead of Dinner put Langar" (owner, 2026-11-23)
 karmaYoga(d);
 add(d, "19:30", "21:00", "Opening Circle", { category: "Community", location: TANTRIC, description: OPENING });
 night(d);
@@ -166,23 +177,25 @@ night(d);
 d = "2026-12-16";
 rise(d, "03:40");
 sadhana(d, "03:40", "06:00", { facilitator: HARIDASS });
-gurdwaraFullDay(d, GURD_AKHAND);
+gurdwaraFullDay(d, GURD_AKHAND, "06:00");
 meal(d, "07:15", "08:15", "Breakfast");
 meditationKY(d);
 kids(d);
-cls(d, "09:45", "11:00", "Raising the Heart with our Inner Sun Power", "Kriya and Meditation", CHURUATA, CHRIS, { description: D_CHRIS });
-cls(d, "09:45", "11:00", "Understanding the Science and Research on Yoga", "Lecture", TREE, SAT_BIR, { description: D_SAT_BIR });
+// Venues swapped (owner, 2026-11-23): the sheet has Sat Bir Singh in the Churuata column.
+cls(d, "09:45", "11:00", "Raising the Heart with our Inner Sun Power", "Kriya and Meditation", TREE, CHRIS, { description: D_CHRIS });
+cls(d, "09:45", "11:00", "Understanding the Science and Research on Yoga", "Lecture", CHURUATA, SAT_BIR, { description: D_SAT_BIR });
 cls(d, "11:15", "12:30", "Mera Man Loche: The Soul's Longing for the Guru", "Mantras", CHURUATA, SAT_NAM, { description: D_SAT_NAM, language: "English / Spanish" }); // the slot the sheet first called "SDI"
 cls(d, "11:15", "12:30", "IKYTA Day", "Workshop", TREE, RAI, { description: IKYTA });
 meal(d, "12:30", "13:45", "Lunch", LUNCH);
-add(d, "12:30", "13:45", "WTY Monitors Meeting", { category: "White Tantric Yoga", location: CHURUATA, description: MONITORS });
+add(d, "12:30", "13:45", "WTY Monitors Meeting", { category: "White Tantric Yoga", location: LANGAR_HALL, description: MONITORS }); // "@ Dining Hall" (sheet; owner, 2026-11-23)
 cls(d, "13:45", "17:00", "Sat Nam Rasayan", "Meditation", TANTRIC, SIRI_SIMRAN, { description: SNR });
+add(d, "15:45", "17:00", "Ministers Gathering", { category: "Community", location: CHURUATA }); // owner, 2026-11-23 ("3:45-54" read as 3:45–5:00)
 rehras(d);
 meal(d, "17:30", "18:30", "Dinner");
-add(d, "17:30", "18:30", "WTY First Timers Meeting", { category: "White Tantric Yoga", location: TANTRIC, description: FIRST_TIMERS }); // Tantric Shelter (owner, 2026-10-29)
+add(d, "17:30", "18:30", "WTY First Timers Meeting", { category: "White Tantric Yoga", location: LANGAR_HALL, description: FIRST_TIMERS }); // Langar Hall (owner, 2026-11-23)
 karmaYoga(d);
 eveningMusic(d, "3HO All-Star Music Jam", MUSIC_JAM);
-eveningGong(d, true);
+// No Evening Gong on the 16th (owner, 2026-11-23).
 night(d);
 
 /* ------------------------------------------------------------- Thu 17 · Fri 18 · Sat 19 · White Tantric Yoga® */
@@ -190,11 +203,13 @@ night(d);
 for (const [date, n] of [["2026-12-17", "One"], ["2026-12-18", "Two"], ["2026-12-19", "Three"]]) {
   rise(date, "03:40");
   sadhana(date, "03:40", "05:50", { description: SADHANA_WTY });
-  gurdwara(date, "05:50", "07:00", GURD_WTY);
+  // Thu and Fri end at 6:50 (owner, 2026-11-23); Saturday's carries the Bhog at 6:15.
+  if (n === "Three") gurdwara(date, "05:50", "07:00", GURD_BHOG);
+  else gurdwara(date, "05:50", "06:50", GURD_WTY);
   meal(date, "07:00", "08:00", "Breakfast");
   add(date, "08:00", "17:30", `White Tantric Yoga® – Day ${n}`, { category: "White Tantric Yoga", location: TANTRIC, description: WTY });
   kids(date, n === "Two" ? KIDS_FRI : KIDS_DESC); // Gurdwara tab: "Childrens camp 12-18-26 2:30" = Friday
-  meal(date, "17:30", "18:30", "Dinner");
+  meal(date, "17:30", "18:30", "Dinner", DINNER_WTY);
   karmaYoga(date);
   eveningMusic(date, "Yogi Tea Café Open Mic", OPEN_MIC);
   eveningGong(date, false);
@@ -225,7 +240,7 @@ rehras(d);
 meal(d, "17:30", "18:30", "Dinner");
 add(d, "18:30", "19:30", "Closing Circle", { category: "Community", location: TANTRIC, description: CLOSING });
 add(d, "19:30", "20:00", "Nagar Kirtan", { category: "Gurdwara", description: NAGAR }); // no time in the sheet: between the Closing Circle and Rensabai
-add(d, "20:00", null, "Rensabai Kirtan", { id: `${d}-1930-rensabai-kirtan`, category: "Music", location: GURDWARA, facilitator: KARINA, description: RENSABAI }); // "Rensabhai 8:00"
+add(d, "20:00", null, "Rensabai Kirtan", { id: `${d}-1930-rensabai-kirtan`, category: "Music", location: GURDWARA, facilitator: MULTIPLE, description: RENSABAI }); // "Rensabhai 8:00"; the Rensaibai tab's four musicians
 night(d);
 
 /* ------------------------------------------------------------- Mon Dec 21 · departure */
@@ -256,11 +271,24 @@ inco.description = "Open lawn for circles and outdoor classes.";
 if (!fixture.venues.some((v) => v.id === "tree-pavilion")) {
   fixture.venues.push({ id: "tree-pavilion", name: TREE, description: "Open-air pavilion under the trees for workshops. Location on the map to be confirmed.", kind: "venue" });
 }
+// The Yogi Tea Café (owner, 2026-11-23): same id, so the import renames it in place.
+const yogiTea = fixture.venues.find((v) => v.id === "bazaar-yogi-tea");
+if (!yogiTea) throw new Error("fixture has no bazaar-yogi-tea venue");
+yogiTea.name = YOGI_TEA;
+yogiTea.description = "Bazaar stalls and the Yogi Tea Café: Yogi Tea and evening music.";
+const churuata = fixture.venues.find((v) => v.id === "churuata");
+if (!churuata) throw new Error("fixture has no churuata venue");
+churuata.description = "Workshops, classes and the evening gong. Meals are in the Langar Hall.";
+if (!fixture.venues.some((v) => v.id === "langar-hall")) {
+  fixture.venues.push({ id: "langar-hall", name: LANGAR_HALL, description: "Guru Ka Langar and all meals. Location on the map to be confirmed.", kind: "venue" });
+}
 
 // Teachers: the 12 presenters production first carried (same ids, so the CSV
 // updates rather than duplicates), the ones the sheet names that the summer
 // booklet data already knows, and the new ones from the Teacher Needs tab.
-const PRODUCTION_TEACHERS = JSON.parse(readFileSync(join(ROOT, "references", "wsol26-teachers-production.json"), "utf8"));
+// Karuna is off the teacher list (owner, 2026-11-23): her class left the grid on 2026-11-19.
+const DROPPED_TEACHERS = new Set(["karuna"]);
+const PRODUCTION_TEACHERS = JSON.parse(readFileSync(join(ROOT, "references", "wsol26-teachers-production.json"), "utf8")).filter((t) => !DROPPED_TEACHERS.has(t.id));
 const summer = JSON.parse(readFileSync(SUMMER_TEACHERS, "utf8"));
 // `as` renames a summer record to the name the winter sheet uses.
 const FROM_SUMMER = [

@@ -36,7 +36,7 @@ The other tabs:
 | Artifact | Content |
 |---|---|
 | `scripts/wsol26-official-program.mjs` | The transcription: every session as code, with the reading decisions below. Run it to rewrite the fixture (it bumps `version`). |
-| `scripts/fixtures/wsol26.json` (v14) | `program` 93 items over Dec 15–21 (9 tagged "To be announced"), `venues` 23 (Inco Park promoted to a program venue, Tree Pavilion added), `teachers` 18. |
+| `scripts/fixtures/wsol26.json` (v15) | `program` 93 items over Dec 15–21 (9 tagged "To be announced"), `venues` 24 (Inco Park promoted to a program venue, Tree Pavilion and Langar Hall added), `teachers` 17. |
 | `references/wsol26-teachers-production.json` | Snapshot of the 12 presenters production first carried (ids, names, name variants, bios, photos), so the fixture and the CSV reuse their ids. The other six come from the summer booklet data or the Teacher Needs tab (see the name table below). |
 | `scripts/fixtures/csv/wsol26-{program,venues,teachers}.csv` | What goes into **Event App → Import** (`npm run fixtures:csv -- wsol26`). |
 
@@ -66,7 +66,8 @@ How the cells were turned into items:
 
 - **"Wake Up"** is published as **"Rise up sweet family dear!"**, the traditional call the
   app has used since the summer booklet (it renders as a routine row).
-- **Meals** sit at **CHURUATA** (the map's dining hall); the sheet gives no meal venue.
+- **Meals** sit at the **LANGAR HALL** (owner, 2026-11-23; the camp's map calls it the Dining Hall,
+  next to the Kitchen). Until then they were published at Churuata, a guess: the sheet gives no meal venue.
 - **"All-Camp Meditation + KYM"** is one 8:30–9:30 item, *All-Camp Meditation & Karma Yoga
   Meetings*, at Tantric Shelter — the sheet gives the hour, not the split.
 - **Breaks** (9:30, 11:00, 3:30) are not items.
@@ -169,6 +170,33 @@ app's web deployment, so they show in both places.
 - The Gurdwara set-up checklist and everything personal in Teacher Needs (emails, phones,
   lesson plans, equipment).
 
+## What changed on 2026-11-23
+
+Not from the sheet: a list of 17 changes sent by the owner (fixture v14 → v15, still 93 items):
+
+- **Titles:** *All-Camp Meditation & Karma Yoga / Team Meetings* (Wed, Sun); *Rehras Sahib*
+  (also inside Tuesday's Gurdwara text); Tuesday's dinner is *Langar* ("Guru Ka Langar
+  after the Gurdwara"). Ids pinned.
+- **Venues:** new **LANGAR HALL** (no map pin yet) for every meal, the WTY Monitors Meeting
+  ("@ Dining Hall", as the sheet now says) and the WTY First Timers Meeting; Tuesday's
+  Gurdwara ends "go to the Langar Hall for Guru Ka Langar". **BAZAAR / YOGI TEA** is
+  **BAZAAR / YOGI TEA CAFÉ** (same id, so the import renames it). Wed 9:45: Chris Maanas at
+  Tree Pavilion and Sat Bir Singh at Churuata (swapped; the sheet still has them the other
+  way round).
+- **Tue:** Arrival & Registration from 1:00 PM (the sheet still says 2–8).
+- **Wed:** Gurdwara 6:00–7:15 AM with a Siri Singh Sahib lecture; the Akhand Paath / Sahej
+  Paath sentence closes its description, with the readers' sign-up contact (Maha Atma,
+  email given by the owner for publication). New *Ministers Gathering* 3:45–5:00 PM at
+  Churuata ("3:45-54" in the request, confirmed as 5:00), so Sat Nam Rasayan's description no
+  longer says "no parallel classes". **No Evening Gong.**
+- **Thu, Fri:** Gurdwara 5:50–6:50 AM. **Sat:** Gurdwara unchanged (5:50–7:00) with "Bhog of
+  the Akhand Paath / Sahej Paath at 6:15 AM". **Thu–Sat:** dinner "served after the White
+  Tantric Yoga® program" (time unchanged, 5:30).
+- **Sun:** Rensabai Kirtan's facilitator is *Multiple Artists* (plain text, like Kiret Naam
+  Kaur), with Karina Skye, Livtar Singh, Japa Kaur and Sat Kiran named in the description.
+- **Teachers:** Karuna removed (`DROPPED_TEACHERS` in the script). Production needs the
+  teachers CSV in **Replace** to retire her row; *Add or update* would leave it.
+
 ## What changed on 2026-11-19
 
 Read cell by cell against the 2026-10-29 copy (fixture v12 → v13, 92 → 93 items, 21 → 9
@@ -192,10 +220,9 @@ Read cell by cell against the 2026-10-29 copy (fixture v12 → v13, 92 → 93 it
 
 ## Open questions for the programming team
 
-1. **The Preserver (Karuna).** Sunday 3:45 PM at Tree Pavilion now reads "Sat Kirin Kaur",
-   with no title. Published as *Workshop with Sat Kirin Kaur*, tagged; Karuna's class is no
-   longer in the program. Confirm it was dropped on purpose, and send the new class's title
-   and description. Confirm too that Sat Kirin Kaur is Satkirin Kaur Khalsa (her summer
+1. **Sat Kirin Kaur's class** (Sunday 3:45 PM, Tree Pavilion, where *The Preserver* was;
+   Karuna is off the list since 2026-11-23). Published as *Workshop with Sat Kirin Kaur*,
+   tagged: send its title and description. Confirm too that Sat Kirin Kaur is Satkirin Kaur Khalsa (her summer
    photo is used).
 2. **WTY hours.** Confirm start and end (published 8:00 AM–5:30 PM; 2025 ran to 6:00 PM).
 3. **Gurdwara on full days** at 6:15: the time label changed but the duration column still
@@ -205,10 +232,9 @@ Read cell by cell against the 2026-10-29 copy (fixture v12 → v13, 92 → 93 it
    vows at 6:45 inside a 6:15 Gurdwara, or does that Gurdwara start at 6:45?
 6. **3HO All-Star Music Jam** venue: Yogi Tea Café (published) or Tantric Shelter (the
    column the cell sits in)?
-7. **Evening Gong** on Thu–Sat (the grid shows it on Wednesday only) and who plays each night.
+7. **Evening Gong** on Thu–Sat (still tagged; Wednesday's was removed 2026-11-23) and who plays each night.
 8. **Nagar Kirtan** time: 7:30–8:00 PM is inferred from the Closing Circle and Rensabai.
-9. **Rensabai**: the tab now lists Karina Skye, Livtar Singh, Japa and Sat Kiran; published
-   with Karina Skye only. It runs through the night, so Sunday's 10:00 PM Lights Out, which
+9. **Rensabai**: published with *Multiple Artists* and the four names (2026-11-23). It runs through the night, so Sunday's 10:00 PM Lights Out, which
    the sheet merges across Tue–Sun, may not apply.
 10. **Sadhana leaders** for Thu–Mon.
 11. **Rewiring Stress into Strength**: the cell is in the Churuata column but its text still
@@ -219,7 +245,8 @@ Read cell by cell against the 2026-10-29 copy (fixture v12 → v13, 92 → 93 it
 14. **Kids Camp** daily schedule (Youth camp tab is empty).
 15. **Profiles**: Kiret Naam Kaur (nothing yet); bios for Rai Singh, Shakta Kaur, Sat Kirin
     Kaur, Chief Open Heart and Karina Skye.
-16. **Tree Pavilion**: where it is on the map.
+16. **Tree Pavilion** and **Langar Hall**: where they are on the map (the team's own map shows the
+    Dining Hall in the yellow block under the Kitchen).
 17. A loose note ": Chris Maanas - Meditation" is still not placed anywhere.
 
 ## Importing into production

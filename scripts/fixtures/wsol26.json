@@ -1,7 +1,7 @@
 {
   "_comment": "Dummy WSOL26 bundle for local testing. Event metadata (name, dates, venue) and the White Tantric Yoga days (Dec 17-19) mirror the real registration system. The PROGRAM, VENUES and TEACHERS are the official Winter Solstice 2026 program as read from the programming team's master sheet, written by scripts/wsol26-official-program.mjs (reading decisions and open questions in docs/WSOL26-PROGRAM.md); items tagged 'To be announced' are the ones the sheet leaves open. Info pages and menus are interim. Venue map pins are measured on the real map artwork (references/winter-solstice-map-revised-v3.jpg, served by the mock as /photos/wsol26-map.jpg). Served by scripts/mock-backend.mjs and convertible to CSV with scripts/fixture-to-csv.mjs. See docs/CONTENT-MODEL.md.",
   "ok": true,
-  "version": 14,
+  "version": 15,
   "event": {
     "slug": "wsol26",
     "name": "Winter Solstice Sadhana Celebration 2026",
@@ -14,6 +14,17 @@
   },
   "program": [
     {
+      "id": "2026-12-15-1300-arrival-registration",
+      "date": "2026-12-15",
+      "day": "Tuesday",
+      "startTime": "13:00",
+      "endTime": "20:00",
+      "title": "Arrival & Registration",
+      "category": "Logistics",
+      "location": "OFFICE",
+      "description": "Have your ticket QR code and a photo ID ready. If you don't have a service exchange or karma yoga team yet, one will be assigned at check-in."
+    },
+    {
       "id": "2026-12-15-1400-gurdwara",
       "date": "2026-12-15",
       "day": "Tuesday",
@@ -22,18 +33,7 @@
       "title": "Gurdwara",
       "category": "Gurdwara",
       "location": "GURDWARA",
-      "description": "The Gurdwara opens the Solstice: Sukhmani Sahib 2:00–4:00 PM, Rehras 4:00–4:30 PM, then Anand Sahib, Ardas and Hukam 4:30–5:30 PM. All are welcome."
-    },
-    {
-      "id": "2026-12-15-1300-arrival-registration",
-      "date": "2026-12-15",
-      "day": "Tuesday",
-      "startTime": "14:00",
-      "endTime": "20:00",
-      "title": "Arrival & Registration",
-      "category": "Logistics",
-      "location": "OFFICE",
-      "description": "Have your ticket QR code and a photo ID ready. If you don't have a service exchange or karma yoga team yet, one will be assigned at check-in."
+      "description": "The Gurdwara opens the Solstice: Sukhmani Sahib 2:00–4:00 PM, Rehras Sahib 4:00–4:30 PM, then Anand Sahib, Ardas and Hukam 4:30–5:30 PM. All are welcome. Afterwards, go to the Langar Hall for Guru Ka Langar."
     },
     {
       "id": "2026-12-15-1730-dinner",
@@ -41,10 +41,10 @@
       "day": "Tuesday",
       "startTime": "17:30",
       "endTime": "18:30",
-      "title": "🍴 Dinner",
+      "title": "🍴 Langar",
       "category": "Meal",
-      "location": "CHURUATA",
-      "description": "Served langar style."
+      "location": "LANGAR HALL",
+      "description": "Guru Ka Langar after the Gurdwara, served langar style."
     },
     {
       "id": "2026-12-15-1830-karma-yoga-action",
@@ -107,12 +107,12 @@
       "id": "2026-12-16-0600-gurdwara",
       "date": "2026-12-16",
       "day": "Wednesday",
-      "startTime": "06:15",
+      "startTime": "06:00",
       "endTime": "07:15",
       "title": "Gurdwara",
       "category": "Gurdwara",
       "location": "GURDWARA",
-      "description": "Gurdwara is a sacred space of Shabad (sound current), sangat (community), and seva (service). Whether this is your first time or a treasured tradition, you're invited to sit together in remembrance, sing the Naam, and bathe the mind in Gurbani kirtan. All are welcome. The Akhand Paath, the continuous reading of the Siri Guru Granth Sahib, begins at 6:30 AM."
+      "description": "Gurdwara is a sacred space of Shabad (sound current), sangat (community), and seva (service). Whether this is your first time or a treasured tradition, you're invited to sit together in remembrance, sing the Naam, and bathe the mind in Gurbani kirtan. All are welcome. With a Siri Singh Sahib lecture. The Akhand Paath / Sahej Paath, the reading of the Siri Guru Granth Sahib, begins at 6:30 AM. To sign up as a reader or sevadar, contact Maha Atma at mahankaur6@gmail.com."
     },
     {
       "id": "2026-12-16-0715-breakfast",
@@ -122,7 +122,7 @@
       "endTime": "08:15",
       "title": "🍴 Breakfast",
       "category": "Meal",
-      "location": "CHURUATA"
+      "location": "LANGAR HALL"
     },
     {
       "id": "2026-12-16-0830-all-camp-meditation-karma-yoga-meetings",
@@ -130,7 +130,7 @@
       "day": "Wednesday",
       "startTime": "08:30",
       "endTime": "09:30",
-      "title": "All-Camp Meditation & Karma Yoga Meetings",
+      "title": "All-Camp Meditation & Karma Yoga / Team Meetings",
       "category": "Community",
       "location": "TANTRIC SHELTER",
       "description": "A short all-camp meditation, then meet your Karma Yoga or Service Exchange team. All attendees have a karma yoga: it keeps the event sustainable and flowing. Unsure of yours? Ask at the event office."
@@ -157,7 +157,7 @@
       "endTime": "11:00",
       "title": "Raising the Heart with our Inner Sun Power",
       "category": "Kriya and Meditation",
-      "location": "CHURUATA",
+      "location": "TREE PAVILION",
       "facilitator": "Chris Maanas",
       "description": "In these times, everyday is harder and harder to live following the heart in every situation, stress & busy lifestyle make our heart depleted & we are pushed to have our mind in control. We'll use the power of our inner sun activating and uplifting our heart, remembering the love we are."
     },
@@ -169,7 +169,7 @@
       "endTime": "11:00",
       "title": "Understanding the Science and Research on Yoga",
       "category": "Lecture",
-      "location": "TREE PAVILION",
+      "location": "CHURUATA",
       "facilitator": "Sat Bir Singh",
       "description": "In easy-to-understand language, this workshop will review modern biomedical research on yoga with a special focus on Kundalini Yoga. It will include the scientific evidence for how yoga works, clinical trials research, and the value and implications of yoga research in society and healthcare."
     },
@@ -206,7 +206,7 @@
       "endTime": "13:45",
       "title": "🍴 Lunch",
       "category": "Meal",
-      "location": "CHURUATA",
+      "location": "LANGAR HALL",
       "description": "Free time until the afternoon program."
     },
     {
@@ -217,7 +217,7 @@
       "endTime": "13:45",
       "title": "WTY Monitors Meeting",
       "category": "White Tantric Yoga",
-      "location": "CHURUATA",
+      "location": "LANGAR HALL",
       "description": "During lunch. Interested in being a Monitor at White Tantric Yoga® (WTY)? A WTY Monitor must have attended at least one day of WTY, wear white clothing and a white head covering, and wear the Monitor ID marker. Monitors receive the same benefits of WTY as if they were doing the meditations with a partner."
     },
     {
@@ -230,7 +230,17 @@
       "category": "Meditation",
       "location": "TANTRIC SHELTER",
       "facilitator": "Siri Simran Kaur",
-      "description": "In this experience, explore Sat Nam Rasayan® through meditation, breath, and partnered healing. Develop subtle awareness, presence, and intuition while supporting your own healing and others. Experience deep relaxation, nervous system regulation, and greater clarity, peace, and inner spaciousness. All camp together, no parallel classes, with a short break at 3:30 PM."
+      "description": "In this experience, explore Sat Nam Rasayan® through meditation, breath, and partnered healing. Develop subtle awareness, presence, and intuition while supporting your own healing and others. Experience deep relaxation, nervous system regulation, and greater clarity, peace, and inner spaciousness. All camp together, with a short break at 3:30 PM."
+    },
+    {
+      "id": "2026-12-16-1545-ministers-gathering",
+      "date": "2026-12-16",
+      "day": "Wednesday",
+      "startTime": "15:45",
+      "endTime": "17:00",
+      "title": "Ministers Gathering",
+      "category": "Community",
+      "location": "CHURUATA"
     },
     {
       "id": "2026-12-16-1700-rehras",
@@ -238,7 +248,7 @@
       "day": "Wednesday",
       "startTime": "17:00",
       "endTime": "17:30",
-      "title": "Rehras",
+      "title": "Rehras Sahib",
       "category": "Gurdwara",
       "location": "GURDWARA",
       "description": "Evening prayer, followed by Sukhasan (Hukam, Kirtan Sohila, Ardas)."
@@ -251,7 +261,7 @@
       "endTime": "18:30",
       "title": "🍴 Dinner",
       "category": "Meal",
-      "location": "CHURUATA"
+      "location": "LANGAR HALL"
     },
     {
       "id": "2026-12-16-1730-wty-first-timers-meeting",
@@ -261,7 +271,7 @@
       "endTime": "18:30",
       "title": "WTY First Timers Meeting",
       "category": "White Tantric Yoga",
-      "location": "TANTRIC SHELTER",
+      "location": "LANGAR HALL",
       "description": "During dinner. First time at White Tantric Yoga®? Meet the WTY team and learn what to expect over the three days."
     },
     {
@@ -281,19 +291,8 @@
       "endTime": "21:30",
       "title": "3HO All-Star Music Jam",
       "category": "Music",
-      "location": "BAZAAR / YOGI TEA",
+      "location": "BAZAAR / YOGI TEA CAFÉ",
       "description": "Enjoy an evening of devotional chanting mixed with original songs performed by a collection of your favorite Solstice musicians including Livtar Singh, Karina Skye, Japa Kaur and Sat Jot Singh."
-    },
-    {
-      "id": "2026-12-16-2030-gong-meditation",
-      "date": "2026-12-16",
-      "day": "Wednesday",
-      "startTime": "20:30",
-      "endTime": "21:30",
-      "title": "Evening Gong",
-      "category": "Meditation",
-      "location": "CHURUATA",
-      "description": "Gong meditation and deep relaxation at the Churuata. Bring a blanket."
     },
     {
       "id": "2026-12-16-2145-bazaar-closes",
@@ -336,7 +335,7 @@
       "date": "2026-12-17",
       "day": "Thursday",
       "startTime": "05:50",
-      "endTime": "07:00",
+      "endTime": "06:50",
       "title": "Gurdwara",
       "category": "Gurdwara",
       "location": "GURDWARA",
@@ -350,7 +349,7 @@
       "endTime": "08:00",
       "title": "🍴 Breakfast",
       "category": "Meal",
-      "location": "CHURUATA"
+      "location": "LANGAR HALL"
     },
     {
       "id": "2026-12-17-0800-white-tantric-yoga-day-one",
@@ -385,7 +384,8 @@
       "endTime": "18:30",
       "title": "🍴 Dinner",
       "category": "Meal",
-      "location": "CHURUATA"
+      "location": "LANGAR HALL",
+      "description": "Served after the White Tantric Yoga® program."
     },
     {
       "id": "2026-12-17-1830-karma-yoga-action",
@@ -404,7 +404,7 @@
       "endTime": "21:30",
       "title": "Yogi Tea Café Open Mic",
       "category": "Music",
-      "location": "BAZAAR / YOGI TEA",
+      "location": "BAZAAR / YOGI TEA CAFÉ",
       "description": "Following a featured musical performer of the night, the stage is open to those wanting to share their musical talents. Interested parties can contact Japa Kaur to schedule a slot."
     },
     {
@@ -462,7 +462,7 @@
       "date": "2026-12-18",
       "day": "Friday",
       "startTime": "05:50",
-      "endTime": "07:00",
+      "endTime": "06:50",
       "title": "Gurdwara",
       "category": "Gurdwara",
       "location": "GURDWARA",
@@ -476,7 +476,7 @@
       "endTime": "08:00",
       "title": "🍴 Breakfast",
       "category": "Meal",
-      "location": "CHURUATA"
+      "location": "LANGAR HALL"
     },
     {
       "id": "2026-12-18-0800-white-tantric-yoga-day-two",
@@ -511,7 +511,8 @@
       "endTime": "18:30",
       "title": "🍴 Dinner",
       "category": "Meal",
-      "location": "CHURUATA"
+      "location": "LANGAR HALL",
+      "description": "Served after the White Tantric Yoga® program."
     },
     {
       "id": "2026-12-18-1830-karma-yoga-action",
@@ -530,7 +531,7 @@
       "endTime": "21:30",
       "title": "Yogi Tea Café Open Mic",
       "category": "Music",
-      "location": "BAZAAR / YOGI TEA",
+      "location": "BAZAAR / YOGI TEA CAFÉ",
       "description": "Following a featured musical performer of the night, the stage is open to those wanting to share their musical talents. Interested parties can contact Japa Kaur to schedule a slot."
     },
     {
@@ -592,7 +593,7 @@
       "title": "Gurdwara",
       "category": "Gurdwara",
       "location": "GURDWARA",
-      "description": "Gurdwara is a sacred space of Shabad (sound current), sangat (community), and seva (service). Whether this is your first time or a treasured tradition, you're invited to sit together in remembrance, sing the Naam, and bathe the mind in Gurbani kirtan. All are welcome. Shorter on White Tantric Yoga® days."
+      "description": "Gurdwara is a sacred space of Shabad (sound current), sangat (community), and seva (service). Whether this is your first time or a treasured tradition, you're invited to sit together in remembrance, sing the Naam, and bathe the mind in Gurbani kirtan. All are welcome. Shorter on White Tantric Yoga® days. Bhog of the Akhand Paath / Sahej Paath at 6:15 AM."
     },
     {
       "id": "2026-12-19-0700-breakfast",
@@ -602,7 +603,7 @@
       "endTime": "08:00",
       "title": "🍴 Breakfast",
       "category": "Meal",
-      "location": "CHURUATA"
+      "location": "LANGAR HALL"
     },
     {
       "id": "2026-12-19-0800-white-tantric-yoga-day-three",
@@ -637,7 +638,8 @@
       "endTime": "18:30",
       "title": "🍴 Dinner",
       "category": "Meal",
-      "location": "CHURUATA"
+      "location": "LANGAR HALL",
+      "description": "Served after the White Tantric Yoga® program."
     },
     {
       "id": "2026-12-19-1830-karma-yoga-action",
@@ -656,7 +658,7 @@
       "endTime": "21:30",
       "title": "Yogi Tea Café Open Mic",
       "category": "Music",
-      "location": "BAZAAR / YOGI TEA",
+      "location": "BAZAAR / YOGI TEA CAFÉ",
       "description": "Following a featured musical performer of the night, the stage is open to those wanting to share their musical talents. Interested parties can contact Japa Kaur to schedule a slot."
     },
     {
@@ -728,7 +730,7 @@
       "endTime": "08:15",
       "title": "🍴 Breakfast",
       "category": "Meal",
-      "location": "CHURUATA"
+      "location": "LANGAR HALL"
     },
     {
       "id": "2026-12-20-0830-all-camp-meditation-karma-yoga-meetings",
@@ -736,7 +738,7 @@
       "day": "Sunday",
       "startTime": "08:30",
       "endTime": "09:30",
-      "title": "All-Camp Meditation & Karma Yoga Meetings",
+      "title": "All-Camp Meditation & Karma Yoga / Team Meetings",
       "category": "Community",
       "location": "TANTRIC SHELTER",
       "description": "A short all-camp meditation, then meet your Karma Yoga or Service Exchange team. All attendees have a karma yoga: it keeps the event sustainable and flowing. Unsure of yours? Ask at the event office."
@@ -833,7 +835,7 @@
       "endTime": "13:45",
       "title": "🍴 Lunch",
       "category": "Meal",
-      "location": "CHURUATA",
+      "location": "LANGAR HALL",
       "description": "Free time until the afternoon program."
     },
     {
@@ -893,7 +895,7 @@
       "day": "Sunday",
       "startTime": "17:00",
       "endTime": "17:30",
-      "title": "Rehras",
+      "title": "Rehras Sahib",
       "category": "Gurdwara",
       "location": "GURDWARA",
       "description": "Evening prayer, followed by Sukhasan (Hukam, Kirtan Sohila, Ardas)."
@@ -906,7 +908,7 @@
       "endTime": "18:30",
       "title": "🍴 Dinner",
       "category": "Meal",
-      "location": "CHURUATA"
+      "location": "LANGAR HALL"
     },
     {
       "id": "2026-12-20-1830-closing-circle",
@@ -937,8 +939,8 @@
       "title": "Rensabai Kirtan",
       "category": "Music",
       "location": "GURDWARA",
-      "facilitator": "Karina Skye",
-      "description": "Rensabai Kirtan: musicians take turns singing Gurbani through the night."
+      "facilitator": "Multiple Artists",
+      "description": "Rensabai Kirtan: musicians take turns singing Gurbani through the night, with Karina Skye, Livtar Singh, Japa Kaur and Sat Kiran."
     },
     {
       "id": "2026-12-20-2145-bazaar-closes",
@@ -995,7 +997,7 @@
       "endTime": "08:15",
       "title": "🍴 Breakfast",
       "category": "Meal",
-      "location": "CHURUATA"
+      "location": "LANGAR HALL"
     },
     {
       "id": "2026-12-21-0815-start-the-journey-home",
@@ -1084,16 +1086,6 @@
       "bio": "",
       "country": "United States",
       "photo": "/images/teachers/Karina-Skye.jpg"
-    },
-    {
-      "id": "karuna",
-      "name": "Karuna",
-      "facilitatorNames": [
-        "Karuna"
-      ],
-      "bio": "Karuna is a teacher of Kundalini Yoga, meditation, and mantra as practical tools for lived transformation and everyday life. A Kundalini Research Institute Associate Level One, Two, and Three Teacher Trainer. Lives in Boulder, CO. Bringing joy, focus, resilience, harmony, healing: yoga, meditation.",
-      "country": "United States",
-      "photo": "https://www.3ho.org/wp-content/uploads/2026/10/Karuna.jpg"
     },
     {
       "id": "khushbir-singh",
@@ -1236,7 +1228,7 @@
     {
       "id": "churuata",
       "name": "CHURUATA",
-      "description": "Meals and Yogi Tea through the day, plus workshops and the youth program.",
+      "description": "Workshops, classes and the evening gong. Meals are in the Langar Hall.",
       "mapPoint": {
         "x": 65.2,
         "y": 61.1
@@ -1305,8 +1297,8 @@
     },
     {
       "id": "bazaar-yogi-tea",
-      "name": "BAZAAR / YOGI TEA",
-      "description": "Bazaar stalls and Yogi Tea service.",
+      "name": "BAZAAR / YOGI TEA CAFÉ",
+      "description": "Bazaar stalls and the Yogi Tea Café: Yogi Tea and evening music.",
       "mapPoint": {
         "x": 40.6,
         "y": 58.2
@@ -1465,6 +1457,12 @@
       "id": "tree-pavilion",
       "name": "TREE PAVILION",
       "description": "Open-air pavilion under the trees for workshops. Location on the map to be confirmed.",
+      "kind": "venue"
+    },
+    {
+      "id": "langar-hall",
+      "name": "LANGAR HALL",
+      "description": "Guru Ka Langar and all meals. Location on the map to be confirmed.",
       "kind": "venue"
     }
   ],
