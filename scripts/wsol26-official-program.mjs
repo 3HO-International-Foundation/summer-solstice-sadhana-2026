@@ -233,7 +233,7 @@ cls(d, "11:15", "12:30", "Conscious Communication within Silence", "Meditation",
 cls(d, "11:15", "12:30", "Winter Solstice Glandular Summit", "Kriya and Meditation", TREE, DYAL, { description: D_DYAL });
 cls(d, "11:15", "12:30", "Women's Circle", "Community", INCO, KIRET);
 meal(d, "12:30", "13:45", "Lunch", LUNCH);
-cls(d, "13:45", "15:30", "Rewiring Stress into Strength", "Kriya and Meditation", CHURUATA, HARIDASS, { description: D_HARIDASS }); // Churuata (owner, 2026-10-29)
+cls(d, "13:45", "15:30", "Rewiring Stress into Strength", "Kriya and Meditation", TANTRIC, HARIDASS, { description: D_HARIDASS }); // Tantric Shelter, as the cell text says (owner, 2026-11-24; was Churuata since 2026-10-29)
 cls(d, "15:45", "17:00", "Rejuvenate: Emotional Balance & Alertness", "Kriya and Meditation", CHURUATA, KHUSHBIR, { description: D_KHUSHBIR });
 // The sheet now reads "Sat Kirin Kaur" where "The Preserver: Karuna" was (2026-11-19).
 cls(d, "15:45", "17:00", "Workshop with Sat Kirin Kaur", "Workshop", TREE, SAT_KIRIN, { description: SAT_KIRIN_CLASS, tags: TBA });

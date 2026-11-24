@@ -91,8 +91,9 @@ How the cells were turned into items:
   row) are items over the meal hour: Monitors at Churuata, First Timers at Tantric Shelter
   (owner, 2026-10-29). The Monitors cell is merged Wed→Sun in the sheet; it is published for
   Wednesday only, as in 2025.
-- **Rewiring Stress into Strength** (Sun 1:45–3:30, the all-camp class) is at Churuata, not
-  the Tantric Shelter (owner, 2026-10-29).
+- **Rewiring Stress into Strength** (Sun 1:45–3:30, the all-camp class) is at the Tantric
+  Shelter, as its cell text says (owner, 2026-11-24; it was published at Churuata from
+  2026-10-29).
 - **White Tantric Yoga® – Day One/Two/Three**: 8:00 AM (warm-ups) to 5:30 PM, description
   carries "gates open 7:15". The sheet does not state the end time.
 - **Kids Camp** 9:00–5:00 on Wed–Sun as "To be announced" (the Youth camp tab is empty but
@@ -239,8 +240,7 @@ Read cell by cell against the 2026-10-29 copy (fixture v12 → v13, 92 → 93 it
 9. **Rensabai**: published with *Multiple Artists* and the four names (2026-11-23). It runs through the night, so Sunday's 10:00 PM Lights Out, which
    the sheet merges across Tue–Sun, may not apply.
 10. **Sadhana leaders** for Thu–Mon.
-11. **Rewiring Stress into Strength**: the cell is in the Churuata column but its text still
-    says "Tantric Shelter". Published at Churuata (owner, 2026-10-29).
+11. ~~**Rewiring Stress into Strength** venue~~: settled, Tantric Shelter (owner, 2026-11-24).
 12. **Sat Nam Rasayan** (Wed): one session 1:45–5:00 with a break, or two? And which title:
     the grid's or the form's.
 13. **IKYTA Day** (Wed 11:15): what the session is.

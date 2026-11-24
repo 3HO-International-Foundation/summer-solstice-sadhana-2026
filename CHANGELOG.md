@@ -112,6 +112,9 @@ ships, its `Unreleased` bullets move into a dated section below — newest on to
 
 ### Changed
 
+- **WSOL26: Rewiring Stress into Strength at the Tantric Shelter** (fixture v16 → v17;
+  `scripts/` and docs only, no cache bump) — Sunday's all-camp class moves back from Churuata,
+  as its cell in the sheet says (owner, 2026-11-24). Imported into production.
 - **WSOL26 Dining Hall on the map** (fixture v15 → v16; `scripts/` and docs only, no cache
   bump) — pin 23 in the lower part of the yellow Kitchen block, where the team's newer map
   labels it; the Kitchen pin (8) moves to the block's top part so the tap targets do not
